@@ -1,0 +1,27 @@
+HEADER
+VTF File Version,1.1
+VTF File Type,0
+PID,265896
+Generated on,2024-04-09 22:13:22
+Resolution,ms
+Min Resolution,ns
+Trace Version,1.1
+TraceID,265897
+
+STRUCTURE
+Group_Start,User and Internal Events
+Dynamic_Row,1,General,User Events from APIs and Internally Generated Events
+Group_End,User and Internal Events
+
+MAPPING
+4,Device Trace Buffer Full
+2,bank0
+3,bank1
+1,bank2
+5,vadd
+6,vadd_1
+
+EVENTS
+146639,0,45563120.023905,1,USER_MARKER,4
+
+DEPENDENCIES

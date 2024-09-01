@@ -1,0 +1,70 @@
+#include <fstream>
+#include <thread>
+#include <vector>
+#include <iostream>
+
+// Function to decode a portion of the file starting from startPos
+void decodePortion(const std::string& fileName, long startPos, long portionSize, std::vector<std::string>& outputArray) {
+    std::ifstream file(fileName, std::ios::binary);
+    if (!file) {
+        std::cerr << "Unable to open file" << std::endl;
+        return;
+    }
+
+    // Move to the starting position for this portion
+    file.seekg(startPos);
+
+    char buffer;
+    std::string currentString;
+    for (long i = 0; i < portionSize && file.read(&buffer, sizeof(buffer)); ++i) {
+        // Assuming a simple decode operation: add character to string
+        // In practice, you would handle UTF-8 decoding properly here
+        currentString.push_back(buffer);
+
+        // For simplicity, let's assume a newline character marks the end of a row
+        if (buffer == '\n') {
+            outputArray.push_back(currentString);
+            currentString.clear();
+        }
+    }
+
+    if (!currentString.empty()) {
+        outputArray.push_back(currentString);
+    }
+
+    file.close();
+}
+
+int main() {
+    std::string fileName = "your_file_path.txt";
+
+    // Determine the size of the file to split into portions
+    std::ifstream file(fileName, std::ios::binary | std::ios::ate);
+    if (!file) {
+        std::cerr << "Unable to open file" << std::endl;
+        return 1;
+    }
+    long fileSize = file.tellg();
+    file.close();
+
+    // Calculate portion sizes (for simplicity, we divide by 3)
+    long portionSize = fileSize / 3;
+
+    // Output arrays for each thread
+    std::vector<std::string> outputArray1, outputArray2, outputArray3;
+
+    // Create and start threads
+    std::thread t1(decodePortion, fileName, 0, portionSize, std::ref(outputArray1));
+    std::thread t2(decodePortion, fileName, portionSize, portionSize, std::ref(outputArray2));
+    std::thread t3(decodePortion, fileName, 2 * portionSize, fileSize - 2 * portionSize, std::ref(outputArray3));
+
+    // Wait for threads to finish
+    t1.join();
+    t2.join();
+    t3.join();
+
+    // At this point, outputArray1, outputArray2, and outputArray3 contain the decoded data
+    // Process or combine the arrays as needed
+
+    return 0;
+}

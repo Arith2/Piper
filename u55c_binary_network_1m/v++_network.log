@@ -1,0 +1,447 @@
+WARNING: [v++ 60-1495] Deprecated parameter found: compiler.userPostSysLinkTcl. Please use this replacement parameter instead: compiler.userPostDebugProfileOverlayTcl
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/reports/link
+	Log files: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/logs/link
+WARNING: [v++ 60-1216] --report/-r option has been deprecated. Please use --report_level/-R estimate to generate an estimate report file for software emulation
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network.xclbin.link_summary, at Sat Mar 30 11:21:48 2024
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Sat Mar 30 11:21:48 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/reports/link/v++_link_network_guidance.html', at Sat Mar 30 11:21:50 2024
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u55c_gen3x16_xdma_3_202210_1
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [11:22:09] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /home/yuzhuyu/u55c/u55c_bil_mem_large_size/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network_krnl.xo --xo /home/yuzhuyu/u55c/u55c_bil_mem_large_size/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/hls_bil_krnl.xo --xo /home/yuzhuyu/u55c/u55c_bil_mem_large_size/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/cmac_krnl.xo -keep --config /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm --target hw --output_dir /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int --temp_dir /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/run_link
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Sat Mar 30 11:22:11 2024
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/yuzhuyu/u55c/u55c_bil_mem_large_size/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network_krnl.xo
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/yuzhuyu/u55c/u55c_bil_mem_large_size/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/hls_bil_krnl.xo
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/yuzhuyu/u55c/u55c_bil_mem_large_size/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/cmac_krnl.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [11:22:23] build_xd_ip_db started: /tools/Xilinx/Vitis/2022.1/bin/build_xd_ip_db -ip_search 0  -sds-pf /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/hw.hpfm -clkid 0 -ip /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/iprepo/ethz_ch_kernel_network_krnl_1_0,network_krnl -ip /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/iprepo/ethz_ch_kernel_cmac_krnl_1_0,cmac_krnl -ip /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/iprepo/xilinx_com_hls_hls_bil_krnl_1_0,hls_bil_krnl -o /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [11:22:34] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2269.770 ; gain = 0.000 ; free physical = 101611 ; free virtual = 191671
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [11:22:34] cfgen started: /tools/Xilinx/Vitis/2022.1/bin/cfgen  -sc network_krnl_1.m_axis_udp_rx:hls_bil_krnl_1.s_axis_udp_rx -sc network_krnl_1.m_axis_udp_rx_meta:hls_bil_krnl_1.s_axis_udp_rx_meta -sc network_krnl_1.m_axis_tcp_port_status:hls_bil_krnl_1.s_axis_tcp_port_status -sc network_krnl_1.m_axis_tcp_open_status:hls_bil_krnl_1.s_axis_tcp_open_status -sc network_krnl_1.m_axis_tcp_notification:hls_bil_krnl_1.s_axis_tcp_notification -sc network_krnl_1.m_axis_tcp_rx_meta:hls_bil_krnl_1.s_axis_tcp_rx_meta -sc network_krnl_1.m_axis_tcp_rx_data:hls_bil_krnl_1.s_axis_tcp_rx_data -sc network_krnl_1.m_axis_tcp_tx_status:hls_bil_krnl_1.s_axis_tcp_tx_status -sc hls_bil_krnl_1.m_axis_udp_tx:network_krnl_1.s_axis_udp_tx -sc hls_bil_krnl_1.m_axis_udp_tx_meta:network_krnl_1.s_axis_udp_tx_meta -sc hls_bil_krnl_1.m_axis_tcp_listen_port:network_krnl_1.s_axis_tcp_listen_port -sc hls_bil_krnl_1.m_axis_tcp_open_connection:network_krnl_1.s_axis_tcp_open_connection -sc hls_bil_krnl_1.m_axis_tcp_close_connection:network_krnl_1.s_axis_tcp_close_connection -sc hls_bil_krnl_1.m_axis_tcp_read_pkg:network_krnl_1.s_axis_tcp_read_pkg -sc hls_bil_krnl_1.m_axis_tcp_tx_meta:network_krnl_1.s_axis_tcp_tx_meta -sc hls_bil_krnl_1.m_axis_tcp_tx_data:network_krnl_1.s_axis_tcp_tx_data -sc cmac_krnl_1.axis_net_rx:network_krnl_1.axis_net_rx -sc network_krnl_1.axis_net_tx:cmac_krnl_1.axis_net_tx -slr cmac_krnl_1:SLR1 -sp hls_bil_krnl_1.table_HBM0:HBM[0] -sp hls_bil_krnl_1.table_HBM1:HBM[1] -sp hls_bil_krnl_1.table_HBM2:HBM[2] -sp hls_bil_krnl_1.table_HBM3:HBM[3] -sp hls_bil_krnl_1.table_HBM4:HBM[4] -sp hls_bil_krnl_1.table_HBM5:HBM[5] -sp hls_bil_krnl_1.table_HBM6:HBM[6] -sp hls_bil_krnl_1.table_HBM7:HBM[7] -sp hls_bil_krnl_1.table_HBM8:HBM[8] -sp hls_bil_krnl_1.table_HBM9:HBM[9] -sp hls_bil_krnl_1.table_HBM10:HBM[10] -sp hls_bil_krnl_1.table_HBM11:HBM[11] -sp hls_bil_krnl_1.table_HBM12:HBM[12] -sp hls_bil_krnl_1.table_HBM13:HBM[13] -sp hls_bil_krnl_1.table_HBM14:HBM[14] -sp hls_bil_krnl_1.table_HBM15:HBM[15] -sp hls_bil_krnl_1.table_HBM16:HBM[16] -sp hls_bil_krnl_1.table_HBM17:HBM[17] -sp hls_bil_krnl_1.table_HBM18:HBM[18] -sp hls_bil_krnl_1.table_HBM19:HBM[19] -sp hls_bil_krnl_1.table_HBM20:HBM[20] -sp hls_bil_krnl_1.table_HBM21:HBM[21] -sp hls_bil_krnl_1.table_HBM22:HBM[22] -sp hls_bil_krnl_1.table_HBM23:HBM[23] -sp hls_bil_krnl_1.table_HBM24:HBM[24] -sp hls_bil_krnl_1.table_HBM25:HBM[25] -sp network_krnl_1.m00_axi:HBM[30] -sp network_krnl_1.m01_axi:HBM[30] -dmclkid 0 -r /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: cmac_krnl, num: 1  {cmac_krnl_1}
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl, num: 1  {hls_bil_krnl_1}
+INFO: [CFGEN 83-0]   kernel: network_krnl, num: 1  {network_krnl_1}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM0, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM1, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM2, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM3, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM4, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM5, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM6, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM7, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM8, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM9, sptag: HBM[9]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM10, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM11, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM12, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM13, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM14, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM15, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM16, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM17, sptag: HBM[17]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM18, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM19, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM20, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM21, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM22, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM23, sptag: HBM[23]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM24, sptag: HBM[24]
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM25, sptag: HBM[25]
+INFO: [CFGEN 83-0]   kernel: network_krnl_1, k_port: m00_axi, sptag: HBM[30]
+INFO: [CFGEN 83-0]   kernel: network_krnl_1, k_port: m01_axi, sptag: HBM[30]
+INFO: [CFGEN 83-0] Stream Specs: 
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_udp_rx => hls_bil_krnl_1.s_axis_udp_rx
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_udp_rx_meta => hls_bil_krnl_1.s_axis_udp_rx_meta
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_port_status => hls_bil_krnl_1.s_axis_tcp_port_status
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_open_status => hls_bil_krnl_1.s_axis_tcp_open_status
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_notification => hls_bil_krnl_1.s_axis_tcp_notification
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_rx_meta => hls_bil_krnl_1.s_axis_tcp_rx_meta
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_rx_data => hls_bil_krnl_1.s_axis_tcp_rx_data
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_tx_status => hls_bil_krnl_1.s_axis_tcp_tx_status
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_udp_tx => network_krnl_1.s_axis_udp_tx
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_udp_tx_meta => network_krnl_1.s_axis_udp_tx_meta
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_listen_port => network_krnl_1.s_axis_tcp_listen_port
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_open_connection => network_krnl_1.s_axis_tcp_open_connection
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_close_connection => network_krnl_1.s_axis_tcp_close_connection
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_read_pkg => network_krnl_1.s_axis_tcp_read_pkg
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_tx_meta => network_krnl_1.s_axis_tcp_tx_meta
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_tx_data => network_krnl_1.s_axis_tcp_tx_data
+INFO: [CFGEN 83-0]   cmac_krnl_1.axis_net_rx => network_krnl_1.axis_net_rx
+INFO: [CFGEN 83-0]   network_krnl_1.axis_net_tx => cmac_krnl_1.axis_net_tx
+INFO: [CFGEN 83-0] SLR Specs: 
+INFO: [CFGEN 83-0]   instance: cmac_krnl_1, SLR: SLR1
+INFO: [SYSTEM_LINK 82-37] [11:22:45] cfgen finished successfully
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2269.770 ; gain = 0.000 ; free physical = 97825 ; free virtual = 187895
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [11:22:45] cf2bd started: /tools/Xilinx/Vitis/2022.1/bin/cf2bd  --linux --trace_buffer 1024 --input_file /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/_sysl/.xsd --temp_dir /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link --output_dir /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int --target_bd ulp.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd ulp.bd -dn dr -dp /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [11:22:52] cf2bd finished successfully
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2269.770 ; gain = 0.000 ; free physical = 95074 ; free virtual = 185138
+INFO: [v++ 60-1441] [11:22:52] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 2208.586 ; gain = 0.000 ; free physical = 95087 ; free virtual = 185150
+INFO: [v++ 60-1443] [11:22:52] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/sdsl.dat -rtd /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/cf2sw.rtd -nofilter /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/cf2sw_full.rtd -xclbin /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/xclbin_orig.xml -o /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/run_link
+INFO: [v++ 60-1441] [11:23:03] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2208.586 ; gain = 0.000 ; free physical = 100304 ; free virtual = 190347
+INFO: [v++ 60-1443] [11:23:03] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/run_link
+INFO: [v++ 60-1441] [11:23:03] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.62 . Memory (MB): peak = 2208.586 ; gain = 0.000 ; free physical = 99581 ; free virtual = 189623
+INFO: [v++ 60-1443] [11:23:03] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f xilinx_u55c_gen3x16_xdma_3_202210_1 --kernel_frequency 150 --remote_ip_cache /home/yuzhuyu/u55c/u55c_bil_mem_large_size/.ipcache -s --dk chipscope:network_krnl_1:m_axis_tcp_open_status --dk chipscope:network_krnl_1:s_axis_tcp_tx_meta --dk chipscope:network_krnl_1:m_axis_tcp_tx_status --dk chipscope:network_krnl_1:s_axis_tcp_open_connection --dk chipscope:network_krnl_1:s_axis_tcp_tx_data --dk chipscope:network_krnl_1:m_axis_tcp_port_status --dk chipscope:network_krnl_1:m_axis_tcp_notification --dk chipscope:network_krnl_1:m_axis_tcp_rx_meta --dk chipscope:network_krnl_1:s_axis_tcp_read_pkg --dk chipscope:network_krnl_1:s_axis_tcp_listen_port --dk chipscope:network_krnl_1:m_axis_tcp_rx_data --output_dir /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int --log_dir /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/logs/link --report_dir /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/reports/link --config /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/vplConfig.ini -k /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link --no-info --iprepo /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/xo/ip_repo/ethz_ch_kernel_cmac_krnl_1_0 --iprepo /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/xo/ip_repo/xilinx_com_hls_hls_bil_krnl_1_0 --iprepo /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/xo/ip_repo/ethz_ch_kernel_network_krnl_1_0 --messageDb /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/run_link/vpl.pb /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/run_link
+
+****** vpl v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/kernel_info.dat'.
+WARNING: [VPL 60-1495] Deprecated parameter found: compiler.userPostSysLinkTcl. Please use this replacement parameter instead: compiler.userPostDebugProfileOverlayTcl
+INFO: [VPL 74-78] Compiler Version string: 2022.1
+INFO: [VPL 60-423]   Target device: xilinx_u55c_gen3x16_xdma_3_202210_1
+INFO: [VPL 60-1032] Extracting hardware platform to /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/.local/hw_platform
+[11:23:24] Run vpl: Step create_project: Started
+Creating Vivado project.
+[11:23:29] Run vpl: Step create_project: Completed
+[11:23:29] Run vpl: Step create_bd: Started
+[11:24:33] Run vpl: Step create_bd: Completed
+[11:24:33] Run vpl: Step update_bd: Started
+[11:25:50] Run vpl: Step update_bd: RUNNING...
+[11:26:28] Run vpl: Step update_bd: Completed
+[11:26:28] Run vpl: Step generate_target: Started
+[11:27:46] Run vpl: Step generate_target: RUNNING...
+[11:29:05] Run vpl: Step generate_target: RUNNING...
+[11:30:26] Run vpl: Step generate_target: RUNNING...
+[11:31:53] Run vpl: Step generate_target: RUNNING...
+[11:32:34] Run vpl: Step generate_target: Completed
+[11:32:34] Run vpl: Step config_hw_runs: Started
+[11:34:00] Run vpl: Step config_hw_runs: RUNNING...
+[11:35:28] Run vpl: Step config_hw_runs: RUNNING...
+[11:36:42] Run vpl: Step config_hw_runs: Completed
+[11:36:42] Run vpl: Step synth: Started
+[11:37:53] Block-level synthesis in progress, 0 of 221 jobs complete, 8 jobs running.
+[11:38:28] Block-level synthesis in progress, 0 of 221 jobs complete, 8 jobs running.
+[11:39:03] Block-level synthesis in progress, 5 of 221 jobs complete, 3 jobs running.
+[11:39:38] Block-level synthesis in progress, 8 of 221 jobs complete, 8 jobs running.
+[11:40:12] Block-level synthesis in progress, 8 of 221 jobs complete, 8 jobs running.
+[11:40:47] Block-level synthesis in progress, 14 of 221 jobs complete, 2 jobs running.
+[11:41:22] Block-level synthesis in progress, 18 of 221 jobs complete, 4 jobs running.
+[11:41:56] Block-level synthesis in progress, 22 of 221 jobs complete, 6 jobs running.
+[11:42:31] Block-level synthesis in progress, 27 of 221 jobs complete, 6 jobs running.
+[11:43:06] Block-level synthesis in progress, 29 of 221 jobs complete, 6 jobs running.
+[11:43:40] Block-level synthesis in progress, 31 of 221 jobs complete, 7 jobs running.
+[11:44:15] Block-level synthesis in progress, 38 of 221 jobs complete, 4 jobs running.
+[11:44:50] Block-level synthesis in progress, 43 of 221 jobs complete, 4 jobs running.
+[11:45:25] Block-level synthesis in progress, 48 of 221 jobs complete, 6 jobs running.
+[11:45:59] Block-level synthesis in progress, 52 of 221 jobs complete, 6 jobs running.
+[11:46:34] Block-level synthesis in progress, 55 of 221 jobs complete, 5 jobs running.
+[11:47:09] Block-level synthesis in progress, 59 of 221 jobs complete, 6 jobs running.
+[11:47:44] Block-level synthesis in progress, 64 of 221 jobs complete, 5 jobs running.
+[11:48:19] Block-level synthesis in progress, 67 of 221 jobs complete, 7 jobs running.
+[11:48:54] Block-level synthesis in progress, 69 of 221 jobs complete, 8 jobs running.
+[11:49:29] Block-level synthesis in progress, 72 of 221 jobs complete, 7 jobs running.
+[11:50:05] Block-level synthesis in progress, 74 of 221 jobs complete, 6 jobs running.
+[11:50:40] Block-level synthesis in progress, 78 of 221 jobs complete, 5 jobs running.
+[11:51:15] Block-level synthesis in progress, 82 of 221 jobs complete, 5 jobs running.
+[11:51:50] Block-level synthesis in progress, 86 of 221 jobs complete, 6 jobs running.
+[11:52:25] Block-level synthesis in progress, 87 of 221 jobs complete, 7 jobs running.
+[11:53:00] Block-level synthesis in progress, 90 of 221 jobs complete, 8 jobs running.
+[11:53:35] Block-level synthesis in progress, 98 of 221 jobs complete, 4 jobs running.
+[11:54:10] Block-level synthesis in progress, 100 of 221 jobs complete, 6 jobs running.
+[11:54:46] Block-level synthesis in progress, 104 of 221 jobs complete, 6 jobs running.
+[11:55:21] Block-level synthesis in progress, 106 of 221 jobs complete, 6 jobs running.
+[11:55:56] Block-level synthesis in progress, 109 of 221 jobs complete, 7 jobs running.
+[11:56:31] Block-level synthesis in progress, 114 of 221 jobs complete, 6 jobs running.
+[11:57:07] Block-level synthesis in progress, 116 of 221 jobs complete, 7 jobs running.
+[11:57:41] Block-level synthesis in progress, 122 of 221 jobs complete, 5 jobs running.
+[11:58:17] Block-level synthesis in progress, 125 of 221 jobs complete, 5 jobs running.
+[11:58:52] Block-level synthesis in progress, 130 of 221 jobs complete, 7 jobs running.
+[11:59:28] Block-level synthesis in progress, 133 of 221 jobs complete, 7 jobs running.
+[12:00:03] Block-level synthesis in progress, 135 of 221 jobs complete, 8 jobs running.
+[12:00:39] Block-level synthesis in progress, 138 of 221 jobs complete, 7 jobs running.
+[12:01:14] Block-level synthesis in progress, 143 of 221 jobs complete, 4 jobs running.
+[12:01:49] Block-level synthesis in progress, 148 of 221 jobs complete, 5 jobs running.
+[12:02:23] Block-level synthesis in progress, 152 of 221 jobs complete, 6 jobs running.
+[12:02:59] Block-level synthesis in progress, 158 of 221 jobs complete, 5 jobs running.
+[12:03:33] Block-level synthesis in progress, 164 of 221 jobs complete, 4 jobs running.
+[12:04:10] Block-level synthesis in progress, 167 of 221 jobs complete, 6 jobs running.
+[12:04:44] Block-level synthesis in progress, 169 of 221 jobs complete, 7 jobs running.
+[12:05:21] Block-level synthesis in progress, 173 of 221 jobs complete, 5 jobs running.
+[12:05:55] Block-level synthesis in progress, 175 of 221 jobs complete, 6 jobs running.
+[12:06:33] Block-level synthesis in progress, 180 of 221 jobs complete, 6 jobs running.
+[12:07:07] Block-level synthesis in progress, 184 of 221 jobs complete, 7 jobs running.
+[12:07:45] Block-level synthesis in progress, 185 of 221 jobs complete, 8 jobs running.
+[12:08:21] Block-level synthesis in progress, 189 of 221 jobs complete, 5 jobs running.
+[12:08:59] Block-level synthesis in progress, 200 of 221 jobs complete, 4 jobs running.
+[12:09:33] Block-level synthesis in progress, 202 of 221 jobs complete, 7 jobs running.
+[12:10:10] Block-level synthesis in progress, 203 of 221 jobs complete, 8 jobs running.
+[12:10:45] Block-level synthesis in progress, 207 of 221 jobs complete, 5 jobs running.
+[12:11:27] Block-level synthesis in progress, 210 of 221 jobs complete, 8 jobs running.
+[12:12:04] Block-level synthesis in progress, 212 of 221 jobs complete, 7 jobs running.
+[12:12:44] Block-level synthesis in progress, 214 of 221 jobs complete, 7 jobs running.
+[12:13:19] Block-level synthesis in progress, 217 of 221 jobs complete, 4 jobs running.
+[12:13:56] Block-level synthesis in progress, 218 of 221 jobs complete, 3 jobs running.
+[12:14:32] Block-level synthesis in progress, 218 of 221 jobs complete, 3 jobs running.
+[12:15:09] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:15:44] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:16:21] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:16:56] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:17:35] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:18:10] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:18:47] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:19:22] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:20:00] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:20:35] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:21:12] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:21:48] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:22:25] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:23:00] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:23:37] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:24:12] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:24:49] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:25:25] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:26:02] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:26:37] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:27:15] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:27:50] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:28:28] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:29:04] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:29:41] Block-level synthesis in progress, 219 of 221 jobs complete, 2 jobs running.
+[12:30:16] Block-level synthesis in progress, 220 of 221 jobs complete, 1 job running.
+[12:30:53] Block-level synthesis in progress, 220 of 221 jobs complete, 1 job running.
+[12:31:28] Block-level synthesis in progress, 220 of 221 jobs complete, 1 job running.
+[12:32:06] Block-level synthesis in progress, 220 of 221 jobs complete, 1 job running.
+[12:32:41] Block-level synthesis in progress, 220 of 221 jobs complete, 1 job running.
+[12:33:18] Block-level synthesis in progress, 220 of 221 jobs complete, 1 job running.
+[12:33:53] Block-level synthesis in progress, 220 of 221 jobs complete, 1 job running.
+[12:34:31] Block-level synthesis in progress, 220 of 221 jobs complete, 1 job running.
+[12:35:06] Block-level synthesis in progress, 220 of 221 jobs complete, 1 job running.
+[12:35:43] Block-level synthesis in progress, 220 of 221 jobs complete, 1 job running.
+[12:36:18] Block-level synthesis in progress, 220 of 221 jobs complete, 1 job running.
+[12:36:56] Block-level synthesis in progress, 220 of 221 jobs complete, 1 job running.
+[12:37:31] Block-level synthesis in progress, 220 of 221 jobs complete, 1 job running.
+[12:38:09] Block-level synthesis in progress, 220 of 221 jobs complete, 1 job running.
+[12:38:44] Block-level synthesis in progress, 220 of 221 jobs complete, 1 job running.
+[12:39:21] Block-level synthesis in progress, 221 of 221 jobs complete, 0 jobs running.
+[12:39:56] Top-level synthesis in progress.
+[12:40:31] Top-level synthesis in progress.
+[12:41:05] Top-level synthesis in progress.
+[12:41:42] Top-level synthesis in progress.
+[12:42:17] Top-level synthesis in progress.
+[12:42:40] Run vpl: Step synth: Completed
+[12:42:40] Run vpl: Step impl: Started
+[13:04:59] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 01h 41m 53s 
+
+[13:04:59] Starting logic optimization..
+[13:05:35] Phase 1 Generate And Synthesize Debug Cores
+[13:10:27] Phase 2 Retarget
+[13:11:04] Phase 3 Constant propagation
+[13:11:04] Phase 4 Sweep
+[13:15:56] Phase 5 BUFG optimization
+[13:16:33] Phase 6 Shift Register Optimization
+[13:16:33] Phase 7 Post Processing Netlist
+[13:20:11] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 15m 12s 
+
+[13:20:11] Starting logic placement..
+[13:22:37] Phase 1 Placer Initialization
+[13:22:37] Phase 1.1 Placer Initialization Netlist Sorting
+[13:28:42] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[13:31:07] Phase 1.3 Build Placer Netlist Model
+[13:37:54] Phase 1.4 Constrain Clocks/Macros
+[13:39:46] Phase 2 Global Placement
+[13:39:46] Phase 2.1 Floorplanning
+[13:43:33] Phase 2.1.1 Partition Driven Placement
+[13:44:09] Phase 2.1.1.1 PBP: Partition Driven Placement
+[13:48:24] Phase 2.1.1.2 PBP: Clock Region Placement
+[13:50:54] Phase 2.1.1.3 PBP: Discrete Incremental
+[13:51:32] Phase 2.1.1.4 PBP: Compute Congestion
+[13:51:32] Phase 2.1.1.5 PBP: Macro Placement
+[13:51:32] Phase 2.1.1.6 PBP: UpdateTiming
+[13:52:48] Phase 2.1.1.7 PBP: Add part constraints
+[13:52:48] Phase 2.2 Physical Synthesis After Floorplan
+[13:54:40] Phase 2.3 Update Timing before SLR Path Opt
+[13:54:40] Phase 2.4 Post-Processing in Floorplanning
+[13:54:40] Phase 2.5 Global Placement Core
+[14:14:56] Phase 2.5.1 Physical Synthesis In Placer
+[14:22:18] Phase 3 Detail Placement
+[14:22:55] Phase 3.1 Commit Multi Column Macros
+[14:23:32] Phase 3.2 Commit Most Macros & LUTRAMs
+[14:27:12] Phase 3.3 Small Shape DP
+[14:27:12] Phase 3.3.1 Small Shape Clustering
+[14:27:49] Phase 3.3.2 Flow Legalize Slice Clusters
+[14:27:49] Phase 3.3.3 Slice Area Swap
+[14:28:26] Phase 3.3.3.1 Slice Area Swap Initial
+[14:32:05] Phase 3.4 Place Remaining
+[14:32:42] Phase 3.5 Re-assign LUT pins
+[14:33:54] Phase 3.6 Pipeline Register Optimization
+[14:33:54] Phase 3.7 Fast Optimization
+[14:35:43] Phase 4 Post Placement Optimization and Clean-Up
+[14:35:43] Phase 4.1 Post Commit Optimization
+[14:39:25] Phase 4.1.1 Post Placement Optimization
+[14:40:41] Phase 4.1.1.1 BUFG Insertion
+[14:40:41] Phase 1 Physical Synthesis Initialization
+[14:44:57] Phase 4.1.1.2 BUFG Replication
+[14:45:33] Phase 4.1.1.3 Post Placement Timing Optimization
+[14:57:49] Phase 4.1.1.4 Replication
+[15:00:52] Phase 4.2 Post Placement Cleanup
+[15:00:52] Phase 4.3 Placer Reporting
+[15:00:52] Phase 4.3.1 Print Estimated Congestion
+[15:01:29] Phase 4.4 Final Placement Cleanup
+[15:09:26] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 01h 49m 15s 
+
+[15:09:26] Starting logic routing..
+[15:12:00] Phase 1 Build RT Design
+[15:18:49] Phase 2 Router Initialization
+[15:18:49] Phase 2.1 Fix Topology Constraints
+[15:19:27] Phase 2.2 Pre Route Cleanup
+[15:20:45] Phase 2.3 Global Clock Net Routing
+[15:23:13] Phase 2.4 Update Timing
+[15:28:41] Phase 2.5 Update Timing for Bus Skew
+[15:28:41] Phase 2.5.1 Update Timing
+[15:31:44] Phase 3 Initial Routing
+[15:31:44] Phase 3.1 Global Routing
+[15:36:01] Phase 4 Rip-up And Reroute
+[15:36:01] Phase 4.1 Global Iteration 0
+[16:12:05] Phase 4.2 Global Iteration 1
+[16:16:59] Phase 4.3 Global Iteration 2
+[16:24:20] Phase 4.4 Global Iteration 3
+[16:30:26] Phase 5 Delay and Skew Optimization
+[16:30:26] Phase 5.1 Delay CleanUp
+[16:30:26] Phase 5.1.1 Update Timing
+[16:32:53] Phase 5.1.2 Update Timing
+[16:35:21] Phase 5.2 Clock Skew Optimization
+[16:36:35] Phase 6 Post Hold Fix
+[16:36:35] Phase 6.1 Hold Fix Iter
+[16:36:35] Phase 6.1.1 Update Timing
+[16:40:15] Phase 7 Leaf Clock Prog Delay Opt
+[16:44:32] Phase 7.1 Delay CleanUp
+[16:44:32] Phase 7.1.1 Update Timing
+[16:46:58] Phase 7.2 Hold Fix Iter
+[16:46:58] Phase 7.2.1 Update Timing
+[16:53:40] Phase 8 Route finalize
+[16:54:16] Phase 9 Verifying routed nets
+[16:54:53] Phase 10 Depositing Routes
+[16:56:43] Phase 11 Resolve XTalk
+[16:57:19] Phase 12 Post Router Timing
+[16:59:46] Finished 5th of 6 tasks (FPGA routing). Elapsed time: 01h 50m 19s 
+
+[16:59:46] Starting bitstream generation..
+[17:25:35] Creating bitmap...
+[17:32:18] Writing bitstream ./level0_i_ulp_my_rm_partial.bit...
+[17:32:18] Finished 6th of 6 tasks (FPGA bitstream generation). Elapsed time: 00h 32m 32s 
+[17:33:33] Run vpl: Step impl: Completed
+[17:33:38] Run vpl: FINISHED. Run Status: impl Complete!
+INFO: [v++ 60-1441] [17:33:47] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:12:35 ; elapsed = 06:10:44 . Memory (MB): peak = 2208.586 ; gain = 0.000 ; free physical = 154444 ; free virtual = 250553
+INFO: [v++ 60-1443] [17:33:47] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/run_link
+INFO: [v++ 60-991] clock name 'ulp_ucs/aclk_kernel_01' (clock ID '1') is being mapped to clock name 'KERNEL_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'ulp_ucs/aclk_kernel_00' (clock ID '0') is being mapped to clock name 'DATA_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'hbm_aclk' (clock ID '') is being mapped to clock name 'hbm_aclk' in the xclbin
+INFO: [v++ 60-1230] The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): System (SYSTEM) clock: hbm_aclk = 450, Kernel (KERNEL) clock: ulp_ucs/aclk_kernel_01 = 500, Kernel (DATA) clock: ulp_ucs/aclk_kernel_00 = 150
+INFO: [v++ 60-1453] Command Line: cf2sw -a /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/address_map.xml -sdsl /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/sdsl.dat -xclbin /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/xclbin_orig.xml -rtd /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/network.rtd -o /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/network.xml
+INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+INFO: [v++ 60-1441] [17:33:56] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2208.586 ; gain = 0.000 ; free physical = 153692 ; free virtual = 249866
+INFO: [v++ 60-1443] [17:33:56] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/network.rtd --append-section :JSON:/home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/network_xml.rtd --add-section BUILD_METADATA:JSON:/home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/network_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/network.xml --add-section SYSTEM_METADATA:RAW:/home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u55c_gen3x16_xdma_3_202210_1 --output /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/run_link
+XRT Build Version: 2.13.466 (2022.1)
+       Build Date: 2022-04-14 17:43:11
+          Hash ID: f5505e402c2ca1ffe45eb6d3a9399b23a0dc8776
+Creating a default 'in-memory' xclbin image.
+
+Section: 'DEBUG_IP_LAYOUT'(9) was successfully added.
+Size   : 152 bytes
+Format : JSON
+File   : '/home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/debug_ip_layout.rtd'
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 65589070 bytes
+Format : RAW
+File   : '/home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/partial.bit'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was successfully added.
+Size   : 410 bytes
+Format : JSON
+File   : '/home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/network_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 26806 bytes
+Format : JSON
+File   : '/home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/network_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 152028 bytes
+Format : RAW
+File   : '/home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/network.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 111408 bytes
+Format : RAW
+File   : '/home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/systemDiagramModelSlrBaseAddress.json'
+
+Section: 'PARTITION_METADATA'(20) was successfully appended to.
+Format : JSON
+File   : 'partition_metadata'
+
+Section: 'IP_LAYOUT'(8) was successfully appended to.
+Format : JSON
+File   : 'ip_layout'
+Successfully wrote (65951506 bytes) to the output file: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [17:33:57] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.67 . Memory (MB): peak = 2208.586 ; gain = 0.000 ; free physical = 153608 ; free virtual = 249850
+INFO: [v++ 60-1443] [17:33:57] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network.xclbin.info --input /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/run_link
+INFO: [v++ 60-1441] [17:33:58] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:00.64 ; elapsed = 00:00:00.8 . Memory (MB): peak = 2208.586 ; gain = 0.000 ; free physical = 153479 ; free virtual = 249729
+INFO: [v++ 60-1443] [17:33:58] Run run_link: Step generate_sc_driver: Started
+INFO: [v++ 60-1453] Command Line: 
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/run_link
+INFO: [v++ 60-1441] [17:33:58] Run run_link: Step generate_sc_driver: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2208.586 ; gain = 0.000 ; free physical = 153476 ; free virtual = 249726
+INFO: [v++ 60-2331] SLR1 was specfied for compute unit cmac_krnl_1, and verified as such in implementation.
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/reports/link/system_estimate_network.xtxt
+INFO: [v++ 60-586] Created /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network.ltx
+INFO: [v++ 60-586] Created build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/reports/link/v++_link_network_guidance.html
+	Timing Report: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt
+	Vivado Log: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/logs/link/vivado.log
+	Steps Log File: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/logs/link/link.steps.log
+
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /home/yuzhuyu/u55c/u55c_bil_mem_large_size/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network.xclbin.link_summary 
+INFO: [v++ 60-791] Total elapsed time: 6h 12m 20s
+INFO: [v++ 60-1653] Closing dispatch client.

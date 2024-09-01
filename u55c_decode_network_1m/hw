@@ -1,0 +1,823 @@
+$DEVICE is [xilinx_u55c_gen3x16_xdma_3_202210_1]
+$POSTSYSLINKTCL is [/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/scripts/post_sys_link.tcl]
+g++ -I.//common/includes/xcl2 -I/pub/scratch/yuzhuyu/xrt_2022.1/opt/xilinx/xrt/include -I/tools/Xilinx//Vivado/2022.1/include -Wall -O0 -g -std=gnu++14 -DVITIS_PLATFORM=xilinx_u55c_gen3x16_xdma_3_202210_1 -fmessage-length=0 .//common/includes/xcl2/xcl2.cpp host/hls_bil_krnl/host.cpp   -o 'host/host'  -L/pub/scratch/yuzhuyu/xrt_2022.1/opt/xilinx/xrt/lib -lOpenCL -lpthread  -lrt -lstdc++
+mkdir -p ./_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1
+/tools/Xilinx//Vivado/2022.1/bin/vivado -mode batch -source scripts/gen_xo.tcl -tclargs ./_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network_krnl.xo network_krnl hw xilinx_u55c_gen3x16_xdma_3_202210_1 xilinx_u55c_gen3x16_xdma_3_202210_1 kernel/network_krnl/network_krnl.xml kernel/network_krnl/package_network_krnl.tcl
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source scripts/gen_xo.tcl
+# if { $::argc != 7 } {
+#     puts "ERROR: Program \"$::argv0\" requires 6 arguments!\n"
+#     puts "Usage: $::argv0 <xoname> <krnl_name> <target> <xpfm_path> <device> <xml_path> <package_tcl_path>\n"
+#     exit
+# }
+# set xoname  [lindex $::argv 0]
+# set krnl_name [lindex $::argv 1]
+# set target    [lindex $::argv 2]
+# set xpfm_path [lindex $::argv 3]
+# set device    [lindex $::argv 4]
+# set xml_path [lindex $::argv 5]
+# set package_tcl_path [lindex $::argv 6]
+# set suffix "${krnl_name}_${target}_${device}"
+# puts "INFO: ${xoname} ${krnl_name} ${target} ${xpfm_path} ${device}" 
+INFO: ./_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network_krnl.xo network_krnl hw xilinx_u55c_gen3x16_xdma_3_202210_1 xilinx_u55c_gen3x16_xdma_3_202210_1
+# source -notrace ${package_tcl_path}
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build/fpga-network-stack/iprepo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'net_axis_register_slice_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_32_d1024' to 'axis_data_fifo_32_d1024' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_64_d1024' to 'axis_data_fifo_64_d1024' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_32_d256' to 'axis_data_fifo_32_d256' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_64_d256' to 'axis_data_fifo_64_d256' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_72_d256' to 'axis_data_fifo_72_d256' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_128_d1024' to 'axis_data_fifo_128_d1024' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_256_d1024' to 'axis_data_fifo_256_d1024' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_512_d1024' to 'axis_data_fifo_512_d1024' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_merger_256' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_interconnect_merger_256' to 'axis_interconnect_merger_256' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_128_2to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_128_4to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_256_2to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_256_4to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_512_2to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_512_4to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_64_to_512_converter' to 'axis_64_to_512_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_512_to_64_converter' to 'axis_512_to_64_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_128_to_512_converter' to 'axis_128_to_512_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_512_to_128_converter' to 'axis_512_to_128_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_256_to_512_converter' to 'axis_256_to_512_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_512_to_256_converter' to 'axis_512_to_256_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_64_to_128_converter' to 'axis_64_to_128_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_128_to_64_converter' to 'axis_128_to_64_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_64_to_256_converter' to 'axis_64_to_256_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_256_to_64_converter' to 'axis_256to_64_converter' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_data_fifo_cc_udp_meta' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_udp_meta' to 'axis_data_fifo_cc_udp_meta' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_data_fifo_cc_udp_data' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_udp_data' to 'axis_data_fifo_cc_udp_data' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_512' to 'axis_data_fifo_cc_512' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_256' to 'axis_data_fifo_cc_256' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_128' to 'axis_data_fifo_cc_128' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_64' to 'axis_data_fifo_cc_64' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_32' to 'axis_data_fifo_cc_32' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_16' to 'axis_data_fifo_cc_16' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_8' to 'axis_data_fifo_cc_8' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_network_controller' to 'ila_network_controller' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_tasi' to 'ila_tasi' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_eventMerger' to 'ila_eventMerger' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_eventEngine' to 'ila_eventEngine' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_handler' to 'ila_handler' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_network_top_perf' to 'ila_network_top_perf' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_listen_port_table' to 'ila_listen_port_table' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_rx_app_if' to 'ila_rx_app_if' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ila_hash_table' to 'ila_hash_table' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'vio_network' to 'vio_network' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axi_datamover_mem' to 'axi_datamover_mem' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axi_datamover_mem_unaligned' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axi_datamover_mem_unaligned' to 'axi_datamover_mem_unaligned' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_clock_converter_32' to 'axis_clock_converter_32' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_clock_converter_64' to 'axis_clock_converter_64' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_clock_converter_96' to 'axis_clock_converter_96' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_clock_converter_136' to 'axis_clock_converter_136' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_clock_converter_144' to 'axis_clock_converter_144' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_clock_converter_200' to 'axis_clock_converter_200' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axil_clock_converter' to 'axil_clock_converter' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axil_net_ctrl_clock_converter' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axil_net_ctrl_clock_converter' to 'axil_net_ctrl_clock_converter' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axil_controller_crossbar' to 'axil_controller_crossbar' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_8' to 'axis_register_slice_8' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_16' to 'axis_register_slice_16' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_24' to 'axis_register_slice_24' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_32' to 'axis_register_slice_32' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_48' to 'axis_register_slice_48' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_72' to 'axis_register_slice_72' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_88' to 'axis_register_slice_88' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_96' to 'axis_register_slice_96' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_176' to 'axis_register_slice_176' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_64' to 'axis_register_slice_64' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_128' to 'axis_register_slice_128' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_256' to 'axis_register_slice_256' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_512' to 'axis_register_slice_512' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_96' to 'axis_data_fifo_96' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_160' to 'axis_data_fifo_160' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_160_cc' to 'axis_data_fifo_160_cc' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_512_cc' to 'axis_data_fifo_512_cc' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'fifo_generator_rdma_cmd' to 'fifo_generator_rdma_cmd' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'fifo_generator_rdma_data' to 'fifo_generator_rdma_data' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axi_register_slice' to 'axi_register_slice' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_interconnect_96_1to2' to 'axis_interconnect_96_1to2' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_160_2to1' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_interconnect_160_2to1' to 'axis_interconnect_160_2to1' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_interconnect_64_1to2' to 'axis_interconnect_64_1to2' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_interconnect_512_1to2' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_interconnect_512_1to2' to 'axis_interconnect_512_1to2' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_register_slice_meta_56_0' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_meta_56_0' to 'axis_register_slice_meta_56_0' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_register_slice_meta_32_0' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_meta_32_0' to 'axis_register_slice_meta_32_0' is not allowed and is ignored.
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'Full_Flags_Reset_Value' from '0' to '1' has been ignored for IP 'axis_sync_fifo'
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_pkg_fifo_512' to 'axis_pkg_fifo_512' is not allowed and is ignored.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/net_axis_register_slice_64/net_axis_register_slice_64.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_data_fifo_32_d1024/axis_data_fifo_32_d1024.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_interconnect_merger_256/axis_interconnect_merger_256.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_interconnect_2to1/axis_interconnect_2to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_interconnect_3to1/axis_interconnect_3to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_interconnect_4to1/axis_interconnect_4to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_interconnect_128_2to1/axis_interconnect_128_2to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_interconnect_128_4to1/axis_interconnect_128_4to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_interconnect_256_2to1/axis_interconnect_256_2to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_interconnect_256_4to1/axis_interconnect_256_4to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_64_to_128_converter/axis_64_to_128_converter.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_128_to_64_converter/axis_128_to_64_converter.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_64_to_256_converter/axis_64_to_256_converter.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_256_to_64_converter/axis_256_to_64_converter.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/dhcp_client_ip/dhcp_client_ip.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_udp_meta/axis_data_fifo_cc_udp_meta.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_udp_data/axis_data_fifo_cc_udp_data.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_512/axis_data_fifo_cc_512.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_256/axis_data_fifo_cc_256.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_128/axis_data_fifo_cc_128.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_64/axis_data_fifo_cc_64.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_32/axis_data_fifo_cc_32.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_16/axis_data_fifo_cc_16.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_data_fifo_cc_8/axis_data_fifo_cc_8.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/ila_mem_inf/ila_mem_inf.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/ila_network_top/ila_network_top.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/ila_network_top2/ila_network_top2.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/ila_network_controller/ila_network_controller.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/ila_tasi/ila_tasi.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/ila_eventMerger/ila_eventMerger.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/ila_eventEngine/ila_eventEngine.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/ila_handler/ila_handler.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/ila_listen_port_table/ila_listen_port_table.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/ila_rx_app_if/ila_rx_app_if.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/ila_hash_table/ila_hash_table.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_clock_converter_32/axis_clock_converter_32.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_clock_converter_64/axis_clock_converter_64.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_clock_converter_96/axis_clock_converter_96.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_clock_converter_136/axis_clock_converter_136.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_clock_converter_144/axis_clock_converter_144.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_clock_converter_200/axis_clock_converter_200.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axil_clock_converter/axil_clock_converter.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axil_net_ctrl_clock_converter/axil_net_ctrl_clock_converter.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axil_controller_crossbar/axil_controller_crossbar.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_register_slice_24/axis_register_slice_24.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_register_slice_96/axis_register_slice_96.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_register_slice_64/axis_register_slice_64.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_register_slice_256/axis_register_slice_256.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_data_fifo_96/axis_data_fifo_96.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_data_fifo_160/axis_data_fifo_160.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_data_fifo_160_cc/axis_data_fifo_160_cc.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/fifo_generator_rdma_cmd/fifo_generator_rdma_cmd.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/fifo_generator_rdma_data/fifo_generator_rdma_data.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axi_register_slice/axi_register_slice.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_interconnect_96_1to2/axis_interconnect_96_1to2.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_interconnect_160_2to1/axis_interconnect_160_2to1.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_interconnect_64_1to2/axis_interconnect_64_1to2.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_interconnect_512_1to2/axis_interconnect_512_1to2.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_sync_fifo/axis_sync_fifo.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/cmd_fifo_xgemac_rxif/cmd_fifo_xgemac_rxif.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/cmd_fifo_xgemac_txif/cmd_fifo_xgemac_txif.xci'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_network_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/axis_pkg_fifo_512/axis_pkg_fifo_512.xci'.
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+INFO: [IP_Flow 19-1842] HDL Parser: Found include file "src/network_types.svh" from the top-level HDL file.
+INFO: [IP_Flow 19-1842] HDL Parser: Found include file "src/network_intf.svh" from the top-level HDL file.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis_net_rx' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis_net_tx' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_tcp_notification' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_tcp_open_status' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_tcp_port_status' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_tcp_rx_data' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_tcp_rx_meta' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_tcp_tx_status' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_udp_rx' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_udp_rx_meta' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_tcp_close_connection' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_tcp_listen_port' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_tcp_open_connection' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_tcp_read_pkg' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_tcp_tx_data' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_tcp_tx_meta' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_udp_tx' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_udp_tx_meta' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm01_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axi_control' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'interrupt' of definition 'xilinx.com:signal:interrupt:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'interrupt': Added interface parameter 'SENSITIVITY' with value 'LEVEL_HIGH'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
+WARNING: [IP_Flow 19-3507] File Group 'xilinx_anylanguagesynthesis (Synthesis)': The referenced subcore 'xilinx.com:ip:axis_interconnect:1.1' is not the latest version in the IP catalog. The latest version is 'xilinx.com:ip:axis_interconnect:2.1'.
+WARNING: [IP_Flow 19-3507] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': The referenced subcore 'xilinx.com:ip:axis_interconnect:1.1' is not the latest version in the IP catalog. The latest version is 'xilinx.com:ip:axis_interconnect:2.1'.
+WARNING: [IP_Flow 19-3507] File Group 'xilinx_implementation (Implementation)': The referenced subcore 'xilinx.com:ip:axis_interconnect:1.1' is not the latest version in the IP catalog. The latest version is 'xilinx.com:ip:axis_interconnect:2.1'.
+WARNING: [IP_Flow 19-3158] Bus Interface 'axis_net_rx': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'axis_net_tx': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_tcp_notification': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_tcp_open_status': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_tcp_port_status': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_tcp_rx_data': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_tcp_rx_meta': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_tcp_tx_status': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_udp_rx': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_udp_rx_meta': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_tcp_close_connection': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_tcp_listen_port': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_tcp_open_connection': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_tcp_read_pkg': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_tcp_tx_data': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_tcp_tx_meta': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_udp_tx': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_udp_tx_meta': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm00_axi': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm01_axi': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axi_control': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-5661] Bus Interface 'ap_clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build/fpga-network-stack/iprepo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 3932.328 ; gain = 0.000 ; free physical = 186342 ; free virtual = 271900
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 's_axi_control'.
+# if {[file exists "${xoname}"]} {
+#     file delete -force "${xoname}"
+# }
+# package_xo -xo_path ${xoname} -kernel_name ${krnl_name} -ip_directory ./packaged_kernel_${suffix} -kernel_xml ${xml_path}
+WARNING: [Vivado 12-4404] The CPU emulation flow in v++ is only supported when using a packaged XO file that contains C-model files, none were found.
+WARNING: [Vivado 12-12407] VLNV in kernel.xml does not match VLNV in any of the IPs specified with the ip_directory option: ethz.ch:kernel:network_krnl:1.0
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 19 09:15:17 2024...
+mkdir -p ./_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1
+/tools/Xilinx//Vitis/2022.1/bin/v++ -t hw --platform xilinx_u55c_gen3x16_xdma_3_202210_1 --save-temps  --kernel_frequency 150 --advanced.param compiler.userPostSysLinkTcl=/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/scripts/post_sys_link.tcl  --dk chipscope:network_krnl_1:m_axis_tcp_open_status --dk chipscope:network_krnl_1:s_axis_tcp_tx_meta --dk chipscope:network_krnl_1:m_axis_tcp_tx_status  --dk chipscope:network_krnl_1:s_axis_tcp_open_connection --dk chipscope:network_krnl_1:s_axis_tcp_tx_data  --dk chipscope:network_krnl_1:m_axis_tcp_port_status --dk chipscope:network_krnl_1:m_axis_tcp_notification --dk chipscope:network_krnl_1:m_axis_tcp_rx_meta  --dk chipscope:network_krnl_1:s_axis_tcp_read_pkg  --dk chipscope:network_krnl_1:s_axis_tcp_listen_port --dk chipscope:network_krnl_1:m_axis_tcp_rx_data --config ./kernel/user_krnl/hls_bil_krnl/config_sp_hls_bil_krnl.txt --config ./scripts/network_krnl_mem.txt --config ./scripts/cmac_krnl_slr.txt --report estimate -c -k hls_bil_krnl -o ./_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/hls_bil_krnl.xo --input_files kernel/user_krnl/hls_bil_krnl/src/hls/*.cpp
+WARNING: [v++ 60-1604] The supplied option 'dk' is deprecated. To standardize the command line, the preferred alternative is 'debug.chipscope','debug.list_ports', 'debug.protocol. 
+Option Map File Used: '/tools/Xilinx/Vitis/2022.1/data/vitis/vpp/optMap.xml'
+
+****** v++ v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+WARNING: [v++ 60-1495] Deprecated parameter found: compiler.userPostSysLinkTcl. Please use this replacement parameter instead: compiler.userPostDebugProfileOverlayTcl
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/_x/reports/hls_bil_krnl
+	Log files: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/_x/logs/hls_bil_krnl
+WARNING: [v++ 60-1216] --report/-r option has been deprecated. Please use --report_level/-R estimate to generate an estimate report file for software emulation
+Running Dispatch Server on port: 45049
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/hls_bil_krnl.xo.compile_summary, at Tue Mar 19 09:15:39 2024
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Tue Mar 19 09:15:39 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/_x/reports/hls_bil_krnl/v++_compile_hls_bil_krnl_guidance.html', at Tue Mar 19 09:15:41 2024
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u55c_gen3x16_xdma_3_202210_1
+INFO: [v++ 60-242] Creating kernel: 'hls_bil_krnl'
+INFO: [v++ 60-1616] Creating a HLS clock using kernel_frequency option: 150 MHz
+
+===>The following messages were generated while  performing high-level synthesis for kernel: hls_bil_krnl Log file: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/_x/hls_bil_krnl/hls_bil_krnl/vitis_hls.log :
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_730_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_730_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_742_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_742_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_1218_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_1218_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_1281_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_1281_2'
+INFO: [v++ 204-61] Pipelining loop 'Network2Stream_VITIS_LOOP_42_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'Network2Stream_VITIS_LOOP_42_1'
+INFO: [v++ 204-61] Pipelining loop 'Network2StreamFilter_VITIS_LOOP_82_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'Network2StreamFilter_VITIS_LOOP_82_1'
+INFO: [v++ 204-61] Pipelining loop 'DecodeASCII'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'DecodeASCII'
+INFO: [v++ 204-61] Pipelining loop 'DecodeUTF8'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'DecodeUTF8'
+INFO: [v++ 204-61] Pipelining loop 'DecodeFilter'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'DecodeFilter'
+INFO: [v++ 204-61] Pipelining loop 'Neg2ZeroLog'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'Neg2ZeroLog'
+INFO: [v++ 204-61] Pipelining loop 'Hex2IntMod'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 37, loop 'Hex2IntMod'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'MapDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'MapDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'Stream2Network'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Stream2Network'
+INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [v++ 200-789] **** Estimated Fmax: 205.47 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/_x/reports/hls_bil_krnl/system_estimate_hls_bil_krnl.xtxt
+INFO: [v++ 60-586] Created ./_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/hls_bil_krnl.xo
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/hls_bil_krnl.xo.compile_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 2m 13s
+INFO: [v++ 60-1653] Closing dispatch client.
+mkdir -p ./_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1
+/tools/Xilinx//Vivado/2022.1/bin/vivado -mode batch -source scripts/gen_xo.tcl -tclargs ./_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/cmac_krnl.xo cmac_krnl hw xilinx_u55c_gen3x16_xdma_3_202210_1 xilinx_u55c_gen3x16_xdma_3_202210_1 kernel/cmac_krnl/cmac_krnl.xml kernel/cmac_krnl/package_cmac_krnl.tcl
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source scripts/gen_xo.tcl
+# if { $::argc != 7 } {
+#     puts "ERROR: Program \"$::argv0\" requires 6 arguments!\n"
+#     puts "Usage: $::argv0 <xoname> <krnl_name> <target> <xpfm_path> <device> <xml_path> <package_tcl_path>\n"
+#     exit
+# }
+# set xoname  [lindex $::argv 0]
+# set krnl_name [lindex $::argv 1]
+# set target    [lindex $::argv 2]
+# set xpfm_path [lindex $::argv 3]
+# set device    [lindex $::argv 4]
+# set xml_path [lindex $::argv 5]
+# set package_tcl_path [lindex $::argv 6]
+# set suffix "${krnl_name}_${target}_${device}"
+# puts "INFO: ${xoname} ${krnl_name} ${target} ${xpfm_path} ${device}" 
+INFO: ./_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/cmac_krnl.xo cmac_krnl hw xilinx_u55c_gen3x16_xdma_3_202210_1 xilinx_u55c_gen3x16_xdma_3_202210_1
+# source -notrace ${package_tcl_path}
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build/fpga-network-stack/iprepo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_register_slice_512' to 'axis_register_slice_512' is not allowed and is ignored.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_pkg_fifo_512' to 'axis_pkg_fifo_512' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'ethernet_frame_padding_512_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [Device 21-403] Loading part xcu55c-fsvh2892-2L-e
+create_ip: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3553.410 ; gain = 462.121 ; free physical = 170535 ; free virtual = 255999
+Generating IPI for u55c cmac_usplus_axis with GT clock running at 161132812 Hz
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'cmac_usplus_axis' to 'cmac_usplus_axis' is not allowed and is ignored.
+WARNING: [IP_Flow 19-4832] The IP name 'axis_data_fifo_cc_udp_data' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'axis_data_fifo_cc_udp_data' to 'axis_data_fifo_cc_udp_data' is not allowed and is ignored.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/kernel/cmac_krnl/src/hdl/cmac_krnl_control_s_axi.sv'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/tmp_kernel_pack_cmac_krnl_hw_xilinx_u55c_gen3x16_xdma_3_202210_1/kernel_pack.srcs/sources_1/ip/ila_cmac/ila_cmac.xci'.
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+INFO: [IP_Flow 19-1842] HDL Parser: Found include file "src/network_types.svh" from the top-level HDL file.
+INFO: [IP_Flow 19-1842] HDL Parser: Found include file "src/network_intf.svh" from the top-level HDL file.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis_net_rx' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axis_net_tx' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
+WARNING: [IP_Flow 19-3158] Bus Interface 'axis_net_rx': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'axis_net_tx': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-5661] Bus Interface 'ap_clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build/fpga-network-stack/iprepo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 3768.098 ; gain = 66.145 ; free physical = 165706 ; free virtual = 251361
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'axis_net_rx'.
+TEMPORARY: Not packaging reference clock as diff clock due to post-System Linker validate error
+# if {[file exists "${xoname}"]} {
+#     file delete -force "${xoname}"
+# }
+# package_xo -xo_path ${xoname} -kernel_name ${krnl_name} -ip_directory ./packaged_kernel_${suffix} -kernel_xml ${xml_path}
+WARNING: [Vivado 12-4404] The CPU emulation flow in v++ is only supported when using a packaged XO file that contains C-model files, none were found.
+WARNING: [Vivado 12-12407] VLNV in kernel.xml does not match VLNV in any of the IPs specified with the ip_directory option: ethz.ch:kernel:cmac_krnl:1.0
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 19 09:18:57 2024...
+mkdir -p ./build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1
+/tools/Xilinx//Vitis/2022.1/bin/v++ -t hw --platform xilinx_u55c_gen3x16_xdma_3_202210_1 --save-temps  --kernel_frequency 150 --advanced.param compiler.userPostSysLinkTcl=/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/scripts/post_sys_link.tcl  --dk chipscope:network_krnl_1:m_axis_tcp_open_status --dk chipscope:network_krnl_1:s_axis_tcp_tx_meta --dk chipscope:network_krnl_1:m_axis_tcp_tx_status  --dk chipscope:network_krnl_1:s_axis_tcp_open_connection --dk chipscope:network_krnl_1:s_axis_tcp_tx_data  --dk chipscope:network_krnl_1:m_axis_tcp_port_status --dk chipscope:network_krnl_1:m_axis_tcp_notification --dk chipscope:network_krnl_1:m_axis_tcp_rx_meta  --dk chipscope:network_krnl_1:s_axis_tcp_read_pkg  --dk chipscope:network_krnl_1:s_axis_tcp_listen_port --dk chipscope:network_krnl_1:m_axis_tcp_rx_data --config ./kernel/user_krnl/hls_bil_krnl/config_sp_hls_bil_krnl.txt --config ./scripts/network_krnl_mem.txt --config ./scripts/cmac_krnl_slr.txt --report estimate --temp_dir ./build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1 -l  -o'build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network.xclbin' _x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network_krnl.xo _x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/hls_bil_krnl.xo _x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/cmac_krnl.xo
+WARNING: [v++ 60-1604] The supplied option 'dk' is deprecated. To standardize the command line, the preferred alternative is 'debug.chipscope','debug.list_ports', 'debug.protocol. 
+Option Map File Used: '/tools/Xilinx/Vitis/2022.1/data/vitis/vpp/optMap.xml'
+
+****** v++ v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+WARNING: [v++ 60-1495] Deprecated parameter found: compiler.userPostSysLinkTcl. Please use this replacement parameter instead: compiler.userPostDebugProfileOverlayTcl
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/reports/link
+	Log files: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/logs/link
+WARNING: [v++ 60-1216] --report/-r option has been deprecated. Please use --report_level/-R estimate to generate an estimate report file for software emulation
+Running Dispatch Server on port: 43431
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network.xclbin.link_summary, at Tue Mar 19 09:19:21 2024
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Tue Mar 19 09:19:21 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/reports/link/v++_link_network_guidance.html', at Tue Mar 19 09:19:23 2024
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u55c_gen3x16_xdma_3_202210_1
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [09:19:31] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network_krnl.xo --xo /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/hls_bil_krnl.xo --xo /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/cmac_krnl.xo -keep --config /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm --target hw --output_dir /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int --temp_dir /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/run_link
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Tue Mar 19 09:19:33 2024
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network_krnl.xo
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/hls_bil_krnl.xo
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/cmac_krnl.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [09:19:37] build_xd_ip_db started: /tools/Xilinx/Vitis/2022.1/bin/build_xd_ip_db -ip_search 0  -sds-pf /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/hw.hpfm -clkid 0 -ip /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/iprepo/xilinx_com_hls_hls_bil_krnl_1_0,hls_bil_krnl -ip /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/iprepo/ethz_ch_kernel_network_krnl_1_0,network_krnl -ip /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/iprepo/ethz_ch_kernel_cmac_krnl_1_0,cmac_krnl -o /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [09:19:46] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2269.770 ; gain = 0.000 ; free physical = 167025 ; free virtual = 252628
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [09:19:46] cfgen started: /tools/Xilinx/Vitis/2022.1/bin/cfgen  -sc network_krnl_1.m_axis_udp_rx:hls_bil_krnl_1.s_axis_udp_rx -sc network_krnl_1.m_axis_udp_rx_meta:hls_bil_krnl_1.s_axis_udp_rx_meta -sc network_krnl_1.m_axis_tcp_port_status:hls_bil_krnl_1.s_axis_tcp_port_status -sc network_krnl_1.m_axis_tcp_open_status:hls_bil_krnl_1.s_axis_tcp_open_status -sc network_krnl_1.m_axis_tcp_notification:hls_bil_krnl_1.s_axis_tcp_notification -sc network_krnl_1.m_axis_tcp_rx_meta:hls_bil_krnl_1.s_axis_tcp_rx_meta -sc network_krnl_1.m_axis_tcp_rx_data:hls_bil_krnl_1.s_axis_tcp_rx_data -sc network_krnl_1.m_axis_tcp_tx_status:hls_bil_krnl_1.s_axis_tcp_tx_status -sc hls_bil_krnl_1.m_axis_udp_tx:network_krnl_1.s_axis_udp_tx -sc hls_bil_krnl_1.m_axis_udp_tx_meta:network_krnl_1.s_axis_udp_tx_meta -sc hls_bil_krnl_1.m_axis_tcp_listen_port:network_krnl_1.s_axis_tcp_listen_port -sc hls_bil_krnl_1.m_axis_tcp_open_connection:network_krnl_1.s_axis_tcp_open_connection -sc hls_bil_krnl_1.m_axis_tcp_close_connection:network_krnl_1.s_axis_tcp_close_connection -sc hls_bil_krnl_1.m_axis_tcp_read_pkg:network_krnl_1.s_axis_tcp_read_pkg -sc hls_bil_krnl_1.m_axis_tcp_tx_meta:network_krnl_1.s_axis_tcp_tx_meta -sc hls_bil_krnl_1.m_axis_tcp_tx_data:network_krnl_1.s_axis_tcp_tx_data -sc cmac_krnl_1.axis_net_rx:network_krnl_1.axis_net_rx -sc network_krnl_1.axis_net_tx:cmac_krnl_1.axis_net_tx -slr cmac_krnl_1:SLR1 -sp hls_bil_krnl_1.table_HBM0:HBM[0] -sp network_krnl_1.m00_axi:HBM[30] -sp network_krnl_1.m01_axi:HBM[30] -dmclkid 0 -r /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: cmac_krnl, num: 1  {cmac_krnl_1}
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl, num: 1  {hls_bil_krnl_1}
+INFO: [CFGEN 83-0]   kernel: network_krnl, num: 1  {network_krnl_1}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: hls_bil_krnl_1, k_port: table_HBM0, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: network_krnl_1, k_port: m00_axi, sptag: HBM[30]
+INFO: [CFGEN 83-0]   kernel: network_krnl_1, k_port: m01_axi, sptag: HBM[30]
+INFO: [CFGEN 83-0] Stream Specs: 
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_udp_rx => hls_bil_krnl_1.s_axis_udp_rx
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_udp_rx_meta => hls_bil_krnl_1.s_axis_udp_rx_meta
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_port_status => hls_bil_krnl_1.s_axis_tcp_port_status
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_open_status => hls_bil_krnl_1.s_axis_tcp_open_status
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_notification => hls_bil_krnl_1.s_axis_tcp_notification
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_rx_meta => hls_bil_krnl_1.s_axis_tcp_rx_meta
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_rx_data => hls_bil_krnl_1.s_axis_tcp_rx_data
+INFO: [CFGEN 83-0]   network_krnl_1.m_axis_tcp_tx_status => hls_bil_krnl_1.s_axis_tcp_tx_status
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_udp_tx => network_krnl_1.s_axis_udp_tx
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_udp_tx_meta => network_krnl_1.s_axis_udp_tx_meta
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_listen_port => network_krnl_1.s_axis_tcp_listen_port
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_open_connection => network_krnl_1.s_axis_tcp_open_connection
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_close_connection => network_krnl_1.s_axis_tcp_close_connection
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_read_pkg => network_krnl_1.s_axis_tcp_read_pkg
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_tx_meta => network_krnl_1.s_axis_tcp_tx_meta
+INFO: [CFGEN 83-0]   hls_bil_krnl_1.m_axis_tcp_tx_data => network_krnl_1.s_axis_tcp_tx_data
+INFO: [CFGEN 83-0]   cmac_krnl_1.axis_net_rx => network_krnl_1.axis_net_rx
+INFO: [CFGEN 83-0]   network_krnl_1.axis_net_tx => cmac_krnl_1.axis_net_tx
+INFO: [CFGEN 83-0] SLR Specs: 
+INFO: [CFGEN 83-0]   instance: cmac_krnl_1, SLR: SLR1
+INFO: [SYSTEM_LINK 82-37] [09:19:55] cfgen finished successfully
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2269.770 ; gain = 0.000 ; free physical = 170983 ; free virtual = 256582
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [09:19:55] cf2bd started: /tools/Xilinx/Vitis/2022.1/bin/cf2bd  --linux --trace_buffer 1024 --input_file /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/_sysl/.xsd --temp_dir /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link --output_dir /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int --target_bd ulp.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd ulp.bd -dn dr -dp /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [09:20:01] cf2bd finished successfully
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2269.770 ; gain = 0.000 ; free physical = 175069 ; free virtual = 260681
+INFO: [v++ 60-1441] [09:20:01] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 2208.574 ; gain = 0.000 ; free physical = 175112 ; free virtual = 260724
+INFO: [v++ 60-1443] [09:20:01] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/sdsl.dat -rtd /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/cf2sw.rtd -nofilter /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/cf2sw_full.rtd -xclbin /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/xclbin_orig.xml -o /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/run_link
+INFO: [v++ 60-1441] [09:20:09] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2208.574 ; gain = 0.000 ; free physical = 175438 ; free virtual = 261052
+INFO: [v++ 60-1443] [09:20:09] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/run_link
+INFO: [v++ 60-1441] [09:20:09] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.45 . Memory (MB): peak = 2208.574 ; gain = 0.000 ; free physical = 175323 ; free virtual = 260936
+INFO: [v++ 60-1443] [09:20:09] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f xilinx_u55c_gen3x16_xdma_3_202210_1 --kernel_frequency 150 --remote_ip_cache /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/.ipcache -s --dk chipscope:network_krnl_1:m_axis_tcp_open_status --dk chipscope:network_krnl_1:s_axis_tcp_tx_meta --dk chipscope:network_krnl_1:m_axis_tcp_tx_status --dk chipscope:network_krnl_1:s_axis_tcp_open_connection --dk chipscope:network_krnl_1:s_axis_tcp_tx_data --dk chipscope:network_krnl_1:m_axis_tcp_port_status --dk chipscope:network_krnl_1:m_axis_tcp_notification --dk chipscope:network_krnl_1:m_axis_tcp_rx_meta --dk chipscope:network_krnl_1:s_axis_tcp_read_pkg --dk chipscope:network_krnl_1:s_axis_tcp_listen_port --dk chipscope:network_krnl_1:m_axis_tcp_rx_data --output_dir /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int --log_dir /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/logs/link --report_dir /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/reports/link --config /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/vplConfig.ini -k /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link --no-info --iprepo /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/xo/ip_repo/xilinx_com_hls_hls_bil_krnl_1_0 --iprepo /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/xo/ip_repo/ethz_ch_kernel_cmac_krnl_1_0 --iprepo /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/xo/ip_repo/ethz_ch_kernel_network_krnl_1_0 --messageDb /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/run_link/vpl.pb /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/run_link
+
+****** vpl v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/kernel_info.dat'.
+WARNING: [VPL 60-1495] Deprecated parameter found: compiler.userPostSysLinkTcl. Please use this replacement parameter instead: compiler.userPostDebugProfileOverlayTcl
+INFO: [VPL 74-78] Compiler Version string: 2022.1
+INFO: [VPL 60-423]   Target device: xilinx_u55c_gen3x16_xdma_3_202210_1
+INFO: [VPL 60-1032] Extracting hardware platform to /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/vivado/vpl/.local/hw_platform
+[09:20:27] Run vpl: Step create_project: Started
+Creating Vivado project.
+[09:20:32] Run vpl: Step create_project: Completed
+[09:20:32] Run vpl: Step create_bd: Started
+[09:21:09] Run vpl: Step create_bd: Completed
+[09:21:09] Run vpl: Step update_bd: Started
+[09:21:54] Run vpl: Step update_bd: Completed
+[09:21:54] Run vpl: Step generate_target: Started
+[09:23:11] Run vpl: Step generate_target: RUNNING...
+[09:24:31] Run vpl: Step generate_target: RUNNING...
+[09:24:49] Run vpl: Step generate_target: Completed
+[09:24:49] Run vpl: Step config_hw_runs: Started
+[09:26:10] Run vpl: Step config_hw_runs: RUNNING...
+[09:26:16] Run vpl: Step config_hw_runs: Completed
+[09:26:16] Run vpl: Step synth: Started
+[09:27:22] Block-level synthesis in progress, 0 of 146 jobs complete, 8 jobs running.
+[09:27:55] Block-level synthesis in progress, 0 of 146 jobs complete, 8 jobs running.
+[09:28:27] Block-level synthesis in progress, 5 of 146 jobs complete, 3 jobs running.
+[09:28:59] Block-level synthesis in progress, 8 of 146 jobs complete, 7 jobs running.
+[09:29:31] Block-level synthesis in progress, 8 of 146 jobs complete, 8 jobs running.
+[09:30:03] Block-level synthesis in progress, 8 of 146 jobs complete, 8 jobs running.
+[09:30:36] Block-level synthesis in progress, 12 of 146 jobs complete, 8 jobs running.
+[09:31:07] Block-level synthesis in progress, 15 of 146 jobs complete, 6 jobs running.
+[09:31:40] Block-level synthesis in progress, 17 of 146 jobs complete, 8 jobs running.
+[09:32:12] Block-level synthesis in progress, 20 of 146 jobs complete, 7 jobs running.
+[09:32:44] Block-level synthesis in progress, 25 of 146 jobs complete, 5 jobs running.
+[09:33:16] Block-level synthesis in progress, 27 of 146 jobs complete, 7 jobs running.
+[09:33:48] Block-level synthesis in progress, 29 of 146 jobs complete, 7 jobs running.
+[09:34:20] Block-level synthesis in progress, 34 of 146 jobs complete, 4 jobs running.
+[09:34:52] Block-level synthesis in progress, 37 of 146 jobs complete, 6 jobs running.
+[09:35:24] Block-level synthesis in progress, 38 of 146 jobs complete, 8 jobs running.
+[09:35:57] Block-level synthesis in progress, 43 of 146 jobs complete, 4 jobs running.
+[09:36:28] Block-level synthesis in progress, 47 of 146 jobs complete, 4 jobs running.
+[09:37:01] Block-level synthesis in progress, 53 of 146 jobs complete, 6 jobs running.
+[09:37:33] Block-level synthesis in progress, 63 of 146 jobs complete, 2 jobs running.
+[09:38:05] Block-level synthesis in progress, 70 of 146 jobs complete, 5 jobs running.
+[09:38:38] Block-level synthesis in progress, 71 of 146 jobs complete, 7 jobs running.
+[09:39:10] Block-level synthesis in progress, 72 of 146 jobs complete, 7 jobs running.
+[09:39:42] Block-level synthesis in progress, 79 of 146 jobs complete, 4 jobs running.
+[09:40:15] Block-level synthesis in progress, 85 of 146 jobs complete, 4 jobs running.
+[09:40:47] Block-level synthesis in progress, 91 of 146 jobs complete, 4 jobs running.
+[09:41:20] Block-level synthesis in progress, 98 of 146 jobs complete, 3 jobs running.
+[09:41:52] Block-level synthesis in progress, 105 of 146 jobs complete, 6 jobs running.
+[09:42:25] Block-level synthesis in progress, 106 of 146 jobs complete, 7 jobs running.
+[09:42:57] Block-level synthesis in progress, 107 of 146 jobs complete, 8 jobs running.
+[09:43:30] Block-level synthesis in progress, 112 of 146 jobs complete, 5 jobs running.
+[09:44:02] Block-level synthesis in progress, 113 of 146 jobs complete, 7 jobs running.
+[09:44:35] Block-level synthesis in progress, 115 of 146 jobs complete, 7 jobs running.
+[09:45:08] Block-level synthesis in progress, 120 of 146 jobs complete, 4 jobs running.
+[09:45:40] Block-level synthesis in progress, 121 of 146 jobs complete, 7 jobs running.
+[09:46:12] Block-level synthesis in progress, 123 of 146 jobs complete, 7 jobs running.
+[09:46:45] Block-level synthesis in progress, 128 of 146 jobs complete, 4 jobs running.
+[09:47:18] Block-level synthesis in progress, 133 of 146 jobs complete, 6 jobs running.
+[09:47:51] Block-level synthesis in progress, 134 of 146 jobs complete, 8 jobs running.
+[09:48:23] Block-level synthesis in progress, 136 of 146 jobs complete, 8 jobs running.
+[09:48:56] Block-level synthesis in progress, 138 of 146 jobs complete, 6 jobs running.
+[09:49:29] Block-level synthesis in progress, 140 of 146 jobs complete, 6 jobs running.
+[09:50:02] Block-level synthesis in progress, 142 of 146 jobs complete, 4 jobs running.
+[09:50:35] Block-level synthesis in progress, 142 of 146 jobs complete, 4 jobs running.
+[09:51:08] Block-level synthesis in progress, 144 of 146 jobs complete, 2 jobs running.
+[09:51:40] Block-level synthesis in progress, 144 of 146 jobs complete, 2 jobs running.
+[09:52:14] Block-level synthesis in progress, 144 of 146 jobs complete, 2 jobs running.
+[09:52:47] Block-level synthesis in progress, 144 of 146 jobs complete, 2 jobs running.
+[09:53:20] Block-level synthesis in progress, 144 of 146 jobs complete, 2 jobs running.
+[09:53:53] Block-level synthesis in progress, 144 of 146 jobs complete, 2 jobs running.
+[09:54:27] Block-level synthesis in progress, 144 of 146 jobs complete, 2 jobs running.
+[09:54:59] Block-level synthesis in progress, 144 of 146 jobs complete, 2 jobs running.
+[09:55:33] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[09:56:05] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[09:56:39] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[09:57:11] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[09:57:44] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[09:58:17] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[09:58:50] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[09:59:23] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[09:59:56] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:00:29] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:01:02] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:01:35] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:02:08] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:02:41] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:03:14] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:03:47] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:04:21] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:04:54] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:05:27] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:06:01] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:06:34] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:07:08] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:07:42] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:08:15] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:08:48] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:09:22] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:09:56] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:10:29] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:11:03] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:11:36] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:12:09] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:12:42] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:13:15] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:13:48] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:14:21] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:14:54] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:15:28] Block-level synthesis in progress, 145 of 146 jobs complete, 1 job running.
+[10:16:00] Top-level synthesis in progress.
+[10:16:33] Top-level synthesis in progress.
+[10:17:05] Top-level synthesis in progress.
+[10:17:39] Top-level synthesis in progress.
+[10:18:25] Run vpl: Step synth: Completed
+[10:18:25] Run vpl: Step impl: Started
+[10:34:22] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 01h 14m 10s 
+
+[10:34:22] Starting logic optimization..
+[10:34:55] Phase 1 Generate And Synthesize Debug Cores
+[10:39:19] Phase 2 Retarget
+[10:39:52] Phase 3 Constant propagation
+[10:39:52] Phase 4 Sweep
+[10:42:38] Phase 5 BUFG optimization
+[10:42:38] Phase 6 Shift Register Optimization
+[10:43:10] Phase 7 Post Processing Netlist
+[10:45:21] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 10m 59s 
+
+[10:45:21] Starting logic placement..
+[10:46:27] Phase 1 Placer Initialization
+[10:46:27] Phase 1.1 Placer Initialization Netlist Sorting
+[10:50:52] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[10:52:32] Phase 1.3 Build Placer Netlist Model
+[10:55:50] Phase 1.4 Constrain Clocks/Macros
+[10:56:55] Phase 2 Global Placement
+[10:56:55] Phase 2.1 Floorplanning
+[10:58:34] Phase 2.1.1 Partition Driven Placement
+[10:58:34] Phase 2.1.1.1 PBP: Partition Driven Placement
+[11:01:52] Phase 2.1.1.2 PBP: Clock Region Placement
+[11:02:59] Phase 2.1.1.3 PBP: Discrete Incremental
+[11:03:32] Phase 2.1.1.4 PBP: Compute Congestion
+[11:03:32] Phase 2.1.1.5 PBP: Macro Placement
+[11:03:32] Phase 2.1.1.6 PBP: UpdateTiming
+[11:04:05] Phase 2.1.1.7 PBP: Add part constraints
+[11:04:05] Phase 2.2 Physical Synthesis After Floorplan
+[11:05:12] Phase 2.3 Update Timing before SLR Path Opt
+[11:05:12] Phase 2.4 Post-Processing in Floorplanning
+[11:05:12] Phase 2.5 Global Placement Core
+[11:20:08] Phase 2.5.1 Physical Synthesis In Placer
+[11:23:27] Phase 3 Detail Placement
+[11:24:00] Phase 3.1 Commit Multi Column Macros
+[11:24:00] Phase 3.2 Commit Most Macros & LUTRAMs
+[11:26:12] Phase 3.3 Small Shape DP
+[11:26:12] Phase 3.3.1 Small Shape Clustering
+[11:26:46] Phase 3.3.2 Flow Legalize Slice Clusters
+[11:26:46] Phase 3.3.3 Slice Area Swap
+[11:27:18] Phase 3.3.3.1 Slice Area Swap Initial
+[11:30:04] Phase 3.4 Place Remaining
+[11:30:04] Phase 3.5 Re-assign LUT pins
+[11:30:36] Phase 3.6 Pipeline Register Optimization
+[11:31:10] Phase 3.7 Fast Optimization
+[11:32:16] Phase 4 Post Placement Optimization and Clean-Up
+[11:32:16] Phase 4.1 Post Commit Optimization
+[11:34:29] Phase 4.1.1 Post Placement Optimization
+[11:35:35] Phase 4.1.1.1 BUFG Insertion
+[11:35:35] Phase 1 Physical Synthesis Initialization
+[11:38:54] Phase 4.1.1.2 BUFG Replication
+[11:38:54] Phase 4.1.1.3 Post Placement Timing Optimization
+[11:42:45] Phase 4.1.1.4 Replication
+[11:44:57] Phase 4.2 Post Placement Cleanup
+[11:45:31] Phase 4.3 Placer Reporting
+[11:45:31] Phase 4.3.1 Print Estimated Congestion
+[11:45:31] Phase 4.4 Final Placement Cleanup
+[12:03:12] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 01h 17m 51s 
+
+[12:03:12] Starting logic routing..
+[12:04:19] Phase 1 Build RT Design
+[12:08:14] Phase 2 Router Initialization
+[12:08:14] Phase 2.1 Fix Topology Constraints
+[12:08:48] Phase 2.2 Pre Route Cleanup
+[12:09:21] Phase 2.3 Global Clock Net Routing
+[12:10:28] Phase 2.4 Update Timing
+[12:14:55] Phase 2.5 Update Timing for Bus Skew
+[12:14:55] Phase 2.5.1 Update Timing
+[12:16:35] Phase 3 Initial Routing
+[12:16:35] Phase 3.1 Global Routing
+[12:19:54] Phase 4 Rip-up And Reroute
+[12:19:54] Phase 4.1 Global Iteration 0
+[12:38:09] Phase 4.2 Global Iteration 1
+[12:51:23] Phase 4.3 Additional Iteration for Hold
+[12:51:23] Phase 4.3.1 Global Iteration for Hold
+[12:51:23] Phase 4.3.1.1 Update Timing
+[12:52:29] Phase 4.3.1.2 Fast Budgeting
+[12:53:35] Phase 4.3.1.3 Lut RouteThru Assignment for hold
+[12:55:47] Phase 4.3.1.4 Update Timing
+[12:57:26] Phase 5 Delay and Skew Optimization
+[12:57:26] Phase 5.1 Delay CleanUp
+[12:57:26] Phase 5.1.1 Update Timing
+[12:59:06] Phase 5.1.2 Update Timing
+[13:00:45] Phase 5.2 Clock Skew Optimization
+[13:01:51] Phase 6 Post Hold Fix
+[13:01:51] Phase 6.1 Hold Fix Iter
+[13:01:51] Phase 6.1.1 Update Timing
+[13:04:04] Phase 7 Leaf Clock Prog Delay Opt
+[13:07:23] Phase 7.1 Delay CleanUp
+[13:07:55] Phase 7.1.1 Update Timing
+[13:09:02] Phase 7.1.2 Update Timing
+[13:10:41] Phase 7.2 Hold Fix Iter
+[13:10:41] Phase 7.2.1 Update Timing
+[13:14:33] Phase 8 Route finalize
+[13:15:06] Phase 9 Verifying routed nets
+[13:15:39] Phase 10 Depositing Routes
+[13:16:45] Phase 11 Resolve XTalk
+[13:17:19] Phase 12 Post Router Timing
+[13:18:25] Phase 13 Physical Synthesis in Router
+[13:18:25] Phase 13.1 Physical Synthesis Initialization
+[13:21:11] Phase 13.2 Critical Path Optimization
+[13:22:17] Finished 5th of 6 tasks (FPGA routing). Elapsed time: 01h 19m 04s 
+
+[13:22:17] Starting bitstream generation..
+[13:38:20] Creating bitmap...
+[13:44:25] Writing bitstream ./level0_i_ulp_my_rm_partial.bit...
+[13:44:59] Finished 6th of 6 tasks (FPGA bitstream generation). Elapsed time: 00h 22m 41s 
+[13:45:35] Run vpl: Step impl: Completed
+[13:45:37] Run vpl: FINISHED. Run Status: impl Complete!
+INFO: [v++ 60-1441] [13:45:42] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:05:35 ; elapsed = 04:25:33 . Memory (MB): peak = 2208.574 ; gain = 0.000 ; free physical = 60065 ; free virtual = 183500
+INFO: [v++ 60-1443] [13:45:42] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/run_link
+INFO: [v++ 60-991] clock name 'ulp_ucs/aclk_kernel_01' (clock ID '1') is being mapped to clock name 'KERNEL_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'ulp_ucs/aclk_kernel_00' (clock ID '0') is being mapped to clock name 'DATA_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'hbm_aclk' (clock ID '') is being mapped to clock name 'hbm_aclk' in the xclbin
+INFO: [v++ 60-1230] The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): System (SYSTEM) clock: hbm_aclk = 450, Kernel (KERNEL) clock: ulp_ucs/aclk_kernel_01 = 500, Kernel (DATA) clock: ulp_ucs/aclk_kernel_00 = 135
+INFO: [v++ 60-1453] Command Line: cf2sw -a /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/address_map.xml -sdsl /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/sdsl.dat -xclbin /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/xclbin_orig.xml -rtd /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/network.rtd -o /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/network.xml
+INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+INFO: [v++ 60-1441] [13:45:49] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2208.574 ; gain = 0.000 ; free physical = 66533 ; free virtual = 189760
+INFO: [v++ 60-1443] [13:45:49] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/network.rtd --append-section :JSON:/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/network_xml.rtd --add-section BUILD_METADATA:JSON:/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/network_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/network.xml --add-section SYSTEM_METADATA:RAW:/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u55c_gen3x16_xdma_3_202210_1 --output /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/run_link
+XRT Build Version: 2.13.466 (2022.1)
+       Build Date: 2022-04-14 17:43:11
+          Hash ID: f5505e402c2ca1ffe45eb6d3a9399b23a0dc8776
+Creating a default 'in-memory' xclbin image.
+
+Section: 'DEBUG_IP_LAYOUT'(9) was successfully added.
+Size   : 152 bytes
+Format : JSON
+File   : '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/debug_ip_layout.rtd'
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 58613574 bytes
+Format : RAW
+File   : '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/partial.bit'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was successfully added.
+Size   : 410 bytes
+Format : JSON
+File   : '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/network_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 18900 bytes
+Format : JSON
+File   : '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/network_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 40524 bytes
+Format : RAW
+File   : '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/network.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 75382 bytes
+Format : RAW
+File   : '/home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/int/systemDiagramModelSlrBaseAddress.json'
+
+Section: 'PARTITION_METADATA'(20) was successfully appended to.
+Format : JSON
+File   : 'partition_metadata'
+
+Section: 'IP_LAYOUT'(8) was successfully appended to.
+Format : JSON
+File   : 'ip_layout'
+Successfully wrote (58806918 bytes) to the output file: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [13:45:49] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.56 . Memory (MB): peak = 2208.574 ; gain = 0.000 ; free physical = 66105 ; free virtual = 189388
+INFO: [v++ 60-1443] [13:45:49] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network.xclbin.info --input /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/run_link
+INFO: [v++ 60-1441] [13:45:50] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:00.62 ; elapsed = 00:00:00.83 . Memory (MB): peak = 2208.574 ; gain = 0.000 ; free physical = 65549 ; free virtual = 188833
+INFO: [v++ 60-1443] [13:45:50] Run run_link: Step generate_sc_driver: Started
+INFO: [v++ 60-1453] Command Line: 
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/link/run_link
+INFO: [v++ 60-1441] [13:45:50] Run run_link: Step generate_sc_driver: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2208.574 ; gain = 0.000 ; free physical = 65533 ; free virtual = 188817
+INFO: [v++ 60-2331] SLR1 was specfied for compute unit cmac_krnl_1, and verified as such in implementation.
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/reports/link/system_estimate_network.xtxt
+INFO: [v++ 60-586] Created /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network.ltx
+INFO: [v++ 60-586] Created build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/reports/link/v++_link_network_guidance.html
+	Timing Report: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt
+	Vivado Log: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/logs/link/vivado.log
+	Steps Log File: /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/logs/link/link.steps.log
+
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /home/yuzhuyu/u55c/u55c_bil_mem_large_size_1/build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/network.xclbin.link_summary 
+INFO: [v++ 60-791] Total elapsed time: 4h 26m 39s
+INFO: [v++ 60-1653] Closing dispatch client.
+emconfigutil --platform xilinx_u55c_gen3x16_xdma_3_202210_1 --od ./_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1
+
+****** configutil v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [ConfigUtil 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm
+INFO: [ConfigUtil 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/hw/hw.xsa'
+INFO: [ConfigUtil 60-1032] Extracting hardware platform to ./_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1
+emulation configuration file `emconfig.json` is created in ./_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1 directory 

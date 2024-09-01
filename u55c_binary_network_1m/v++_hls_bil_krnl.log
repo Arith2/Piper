@@ -1,0 +1,229 @@
+WARNING: [v++ 60-1495] Deprecated parameter found: compiler.userPostSysLinkTcl. Please use this replacement parameter instead: compiler.userPostDebugProfileOverlayTcl
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/_x/reports/hls_bil_krnl
+	Log files: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/_x/logs/hls_bil_krnl
+WARNING: [v++ 60-1216] --report/-r option has been deprecated. Please use --report_level/-R estimate to generate an estimate report file for software emulation
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/yuzhuyu/u55c/u55c_bil_mem_large_size/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/hls_bil_krnl.xo.compile_summary, at Sat Mar 30 11:07:09 2024
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Sat Mar 30 11:07:09 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/yuzhuyu/u55c/u55c_bil_mem_large_size/_x/reports/hls_bil_krnl/v++_compile_hls_bil_krnl_guidance.html', at Sat Mar 30 11:07:10 2024
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u55c_gen3x16_xdma_3_202210_1
+INFO: [v++ 60-242] Creating kernel: 'hls_bil_krnl'
+INFO: [v++ 60-1616] Creating a HLS clock using kernel_frequency option: 150 MHz
+
+===>The following messages were generated while  performing high-level synthesis for kernel: hls_bil_krnl Log file: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/_x/hls_bil_krnl/hls_bil_krnl/vitis_hls.log :
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_70_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_70_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_77_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_77_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_86_3'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_86_3'
+INFO: [v++ 204-61] Pipelining loop 'GenerateTraffic_VITIS_LOOP_22_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 3, Final II = 3, Depth = 5, loop 'GenerateTraffic_VITIS_LOOP_22_1'
+INFO: [v++ 204-61] Pipelining loop 'Network2Stream'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'Network2Stream'
+INFO: [v++ 204-61] Pipelining loop 'NegsToZeroLog_VITIS_LOOP_130_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'NegsToZeroLog_VITIS_LOOP_130_1'
+INFO: [v++ 204-61] Pipelining loop 'HexToIntModRange'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 37, loop 'HexToIntModRange'
+INFO: [v++ 204-61] Pipelining loop 'HexToIntModRange'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 37, loop 'HexToIntModRange'
+INFO: [v++ 204-61] Pipelining loop 'StreamSplit'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'StreamSplit'
+INFO: [v++ 204-61] Pipelining loop 'StreamSplit'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'StreamSplit'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'HashDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictBypass'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'HashDictBypass'
+INFO: [v++ 204-61] Pipelining loop 'HashDictBypass'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'HashDictBypass'
+INFO: [v++ 204-61] Pipelining loop 'HashDictBypass'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'HashDictBypass'
+INFO: [v++ 204-61] Pipelining loop 'HashDictBypass'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'HashDictBypass'
+INFO: [v++ 204-61] Pipelining loop 'HashDictBypass'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'HashDictBypass'
+INFO: [v++ 204-61] Pipelining loop 'HashDictBypass'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'HashDictBypass'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 74, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDictBypass'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'CreateDictBypass'
+INFO: [v++ 204-61] Pipelining loop 'CreateDictBypass'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'CreateDictBypass'
+INFO: [v++ 204-61] Pipelining loop 'CreateDictBypass'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'CreateDictBypass'
+INFO: [v++ 204-61] Pipelining loop 'CreateDictBypass'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'CreateDictBypass'
+INFO: [v++ 204-61] Pipelining loop 'CreateDictBypass'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'CreateDictBypass'
+INFO: [v++ 204-61] Pipelining loop 'CreateDictBypass'.
+INFO: [v++ 17-14] Message 'v++ 204-61' appears 100 times and further instances of the messages will be disabled.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'CreateDictBypass'
+INFO: [v++ 17-14] Message 'v++ 200-1470' appears 100 times and further instances of the messages will be disabled.
+INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [v++ 200-789] **** Estimated Fmax: 205.47 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /home/yuzhuyu/u55c/u55c_bil_mem_large_size/_x/reports/hls_bil_krnl/system_estimate_hls_bil_krnl.xtxt
+INFO: [v++ 60-586] Created ./_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/hls_bil_krnl.xo
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /home/yuzhuyu/u55c/u55c_bil_mem_large_size/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/hls_bil_krnl.xo.compile_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 13m 7s
+INFO: [v++ 60-1653] Closing dispatch client.

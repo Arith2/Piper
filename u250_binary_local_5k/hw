@@ -1,0 +1,524 @@
+mkdir -p ./xclbin
+g++ -g -I./ -I/pub/scratch/yuzhuyu/xrt_2022.1/opt/xilinx/xrt/include -I/tools/Xilinx//Vivado/2022.1/include -I/tools/Xilinx//Vitis_HLS/2022.1/include -Wall -O0 -g -std=c++11 -fmessage-length=0 src/host.cpp src/host.hpp -o 'host' -L/pub/scratch/yuzhuyu/xrt_2022.1/opt/xilinx/xrt/lib -lOpenCL -pthread -lrt -lstdc++
+mkdir -p ./xclbin
+/tools/Xilinx//Vitis/2022.1/bin/v++ -t hw --config design.cfg --save-temps --report estimate --temp_dir ./_x.hw/vadd -c -k vadd -I'src' -o'xclbin/vadd.hw.xo' 'src/vadd.cpp'  #--from_step vpl.impl.post_route_phys_opt_design
+WARNING: [v++ 60-1603] The supplied option 'profile_kernel' is deprecated. The supplied option is replaced by an alternative feature controlled by option ''profile.*''. New options extend profiling beyond kernel and compute units to include additional interfaces.
+Option Map File Used: '/tools/Xilinx/Vitis/2022.1/data/vitis/vpp/optMap.xml'
+INFO: [v++ 82-4274] Default memory will be used for trace offload
+
+****** v++ v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/reports/vadd.hw
+	Log files: /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/logs/vadd.hw
+WARNING: [v++ 60-1216] --report/-r option has been deprecated. Please use --report_level/-R estimate to generate an estimate report file for software emulation
+Running Dispatch Server on port: 36495
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/yuzhuyu/u55c/u250_mem_align_3/xclbin/vadd.hw.xo.compile_summary, at Sat Mar 30 07:54:00 2024
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Sat Mar 30 07:54:00 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/reports/vadd.hw/v++_compile_vadd.hw_guidance.html', at Sat Mar 30 07:54:01 2024
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/xilinx_u250_gen3x16_xdma_4_1_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u250_gen3x16_xdma_4_1_202210_1
+INFO: [v++ 60-242] Creating kernel: 'vadd'
+
+===>The following messages were generated while  performing high-level synthesis for kernel: vadd Log file: /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/vadd.hw/vadd/vitis_hls.log :
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_61_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 3, Final II = 3, Depth = 5, loop 'VITIS_LOOP_61_1'
+INFO: [v++ 204-61] Pipelining loop 'NegsToZeroLog'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'NegsToZeroLog'
+INFO: [v++ 204-61] Pipelining loop 'HexToIntModRange'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 37, loop 'HexToIntModRange'
+INFO: [v++ 204-61] Pipelining loop 'HexToIntModRange'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 37, loop 'HexToIntModRange'
+INFO: [v++ 204-61] Pipelining loop 'StreamSplit'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'StreamSplit'
+INFO: [v++ 204-61] Pipelining loop 'StreamSplit'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'StreamSplit'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'InitializeDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitializeDict'
+INFO: [v++ 204-61] Pipelining loop 'HashDictAndPatch'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'HashDictAndPatch'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 204-61] Pipelining loop 'CreateDict'.
+INFO: [v++ 17-14] Message 'v++ 204-61' appears 100 times and further instances of the messages will be disabled.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'CreateDict'
+INFO: [v++ 17-14] Message 'v++ 200-1470' appears 100 times and further instances of the messages will be disabled.
+INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [v++ 200-789] **** Estimated Fmax: 411.00 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/reports/vadd.hw/system_estimate_vadd.hw.xtxt
+INFO: [v++ 60-586] Created xclbin/vadd.hw.xo
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /home/yuzhuyu/u55c/u250_mem_align_3/xclbin/vadd.hw.xo.compile_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 6m 19s
+INFO: [v++ 60-1653] Closing dispatch client.
+mkdir -p ./xclbin
+/tools/Xilinx//Vitis/2022.1/bin/v++ -t hw --config design.cfg --save-temps --report estimate --temp_dir ./_x.hw/vadd -l --profile_kernel data:all:all:all:all -o'xclbin/vadd.hw.xclbin' xclbin/vadd.hw.xo  #--from_step vpl.impl.post_route_phys_opt_design
+WARNING: [v++ 60-1603] The supplied option 'profile_kernel' is deprecated. The supplied option is replaced by an alternative feature controlled by option ''profile.*''. New options extend profiling beyond kernel and compute units to include additional interfaces.
+Option Map File Used: '/tools/Xilinx/Vitis/2022.1/data/vitis/vpp/optMap.xml'
+INFO: [v++ 82-4274] Default memory will be used for trace offload
+
+****** v++ v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/reports/link
+	Log files: /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/logs/link
+WARNING: [v++ 60-1216] --report/-r option has been deprecated. Please use --report_level/-R estimate to generate an estimate report file for software emulation
+Running Dispatch Server on port: 45273
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/yuzhuyu/u55c/u250_mem_align_3/xclbin/vadd.hw.xclbin.link_summary, at Sat Mar 30 08:00:21 2024
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Sat Mar 30 08:00:21 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/reports/link/v++_link_vadd.hw_guidance.html', at Sat Mar 30 08:00:23 2024
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/xilinx_u250_gen3x16_xdma_4_1_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 82-4274] Default memory will be used for trace offload
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u250_gen3x16_xdma_4_1_202210_1
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [08:00:40] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /home/yuzhuyu/u55c/u250_mem_align_3/xclbin/vadd.hw.xo -keep --config /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/xilinx_u250_gen3x16_xdma_4_1_202210_1.xpfm --target hw --output_dir /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/int --temp_dir /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/run_link
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Sat Mar 30 08:00:41 2024
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/yuzhuyu/u55c/u250_mem_align_3/xclbin/vadd.hw.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [08:00:52] build_xd_ip_db started: /tools/Xilinx/Vitis/2022.1/bin/build_xd_ip_db -ip_search 0  -sds-pf /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/sys_link/hw.hpfm -clkid 0 -ip /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/sys_link/iprepo/xilinx_com_hls_vadd_1_0,vadd -o /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [08:01:00] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2268.562 ; gain = 0.000 ; free physical = 207063 ; free virtual = 291348
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [08:01:00] cfgen started: /tools/Xilinx/Vitis/2022.1/bin/cfgen  -nk vadd:1:vadd_1 -sp vadd_1.table_DDR0:DDR[0] -sp vadd_1.table_DDR1:DDR[1] -sp vadd_1.table_DDR2:DDR[2] -sp vadd_1.table_DDR3:DDR[3] -dmclkid 0 -r /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: vadd, num: 1  {vadd_1}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_DDR0, sptag: DDR[0]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_DDR1, sptag: DDR[1]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_DDR2, sptag: DDR[2]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_DDR3, sptag: DDR[3]
+INFO: [SYSTEM_LINK 82-37] [08:01:06] cfgen finished successfully
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2268.562 ; gain = 0.000 ; free physical = 206991 ; free virtual = 291279
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [08:01:06] cf2bd started: /tools/Xilinx/Vitis/2022.1/bin/cf2bd  --linux --trace_buffer 1024 --input_file /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/sys_link/_sysl/.xsd --temp_dir /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/sys_link --output_dir /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/int --target_bd ulp.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd ulp.bd -dn dr -dp /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [08:01:10] cf2bd finished successfully
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2268.562 ; gain = 0.000 ; free physical = 210075 ; free virtual = 294371
+INFO: [v++ 60-1441] [08:01:10] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 2192.328 ; gain = 0.000 ; free physical = 210115 ; free virtual = 294411
+INFO: [v++ 60-1443] [08:01:10] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/int/sdsl.dat -rtd /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/int/cf2sw.rtd -nofilter /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/int/cf2sw_full.rtd -xclbin /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/int/xclbin_orig.xml -o /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/run_link
+INFO: [v++ 60-1441] [08:01:15] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2192.328 ; gain = 0.000 ; free physical = 208570 ; free virtual = 292864
+INFO: [v++ 60-1443] [08:01:15] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/run_link
+INFO: [v++ 60-1441] [08:01:15] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.53 . Memory (MB): peak = 2192.328 ; gain = 0.000 ; free physical = 208506 ; free virtual = 292800
+INFO: [v++ 60-1443] [08:01:15] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f xilinx_u250_gen3x16_xdma_4_1_202210_1 -g --remote_ip_cache /home/yuzhuyu/u55c/u250_mem_align_3/.ipcache -s --trace_memory DDR[0] --profile_kernel data:all:all:all:all --profile_kernel data:all:all:all --output_dir /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/int --log_dir /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/logs/link --report_dir /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/reports/link --config /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/int/vplConfig.ini -k /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link --no-info --iprepo /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/int/xo/ip_repo/xilinx_com_hls_vadd_1_0 --messageDb /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/run_link/vpl.pb /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/run_link
+
+****** vpl v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/int/kernel_info.dat'.
+INFO: [VPL 74-78] Compiler Version string: 2022.1
+INFO: [VPL 60-423]   Target device: xilinx_u250_gen3x16_xdma_4_1_202210_1
+INFO: [VPL 82-4282] Memory used for trace offload is DDR 0 
+INFO: [VPL 60-1032] Extracting hardware platform to /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/vivado/vpl/.local/hw_platform
+[08:01:35] Run vpl: Step create_project: Started
+Creating Vivado project.
+[08:01:40] Run vpl: Step create_project: Completed
+[08:01:40] Run vpl: Step create_bd: Started
+[08:02:26] Run vpl: Step create_bd: Completed
+[08:02:26] Run vpl: Step update_bd: Started
+WARNING: [VPL-1] The use of profile options turned on trace, which uses a memory resource in one SLR; however kernels or compute units could potentially be located in multiple SLRs. This may impact timing due to SLR crossing. To improve timing, please consider implementing trace memory in every SLRs used via the linker option: --profile.trace_memory <memory>:<SLR>. SLRs present on the design : SLR0 SLR1 SLR2 SLR3
+[08:02:30] Run vpl: Step update_bd: Completed
+[08:02:30] Run vpl: Step generate_target: Started
+[08:03:48] Run vpl: Step generate_target: RUNNING...
+[08:05:09] Run vpl: Step generate_target: RUNNING...
+[08:05:54] Run vpl: Step generate_target: Completed
+[08:05:54] Run vpl: Step config_hw_runs: Started
+[08:07:20] Run vpl: Step config_hw_runs: RUNNING...
+[08:08:47] Run vpl: Step config_hw_runs: RUNNING...
+[08:10:09] Run vpl: Step config_hw_runs: RUNNING...
+[08:10:36] Run vpl: Step config_hw_runs: Completed
+[08:10:36] Run vpl: Step synth: Started
+[08:11:45] Block-level synthesis in progress, 0 of 231 jobs complete, 8 jobs running.
+[08:12:19] Block-level synthesis in progress, 0 of 231 jobs complete, 8 jobs running.
+[08:12:53] Block-level synthesis in progress, 1 of 231 jobs complete, 7 jobs running.
+[08:13:26] Block-level synthesis in progress, 1 of 231 jobs complete, 8 jobs running.
+[08:14:00] Block-level synthesis in progress, 3 of 231 jobs complete, 8 jobs running.
+[08:14:34] Block-level synthesis in progress, 4 of 231 jobs complete, 7 jobs running.
+[08:15:07] Block-level synthesis in progress, 6 of 231 jobs complete, 6 jobs running.
+[08:15:40] Block-level synthesis in progress, 9 of 231 jobs complete, 7 jobs running.
+[08:16:14] Block-level synthesis in progress, 11 of 231 jobs complete, 7 jobs running.
+[08:16:48] Block-level synthesis in progress, 12 of 231 jobs complete, 7 jobs running.
+[08:17:22] Block-level synthesis in progress, 17 of 231 jobs complete, 6 jobs running.
+[08:17:55] Block-level synthesis in progress, 18 of 231 jobs complete, 7 jobs running.
+[08:18:29] Block-level synthesis in progress, 19 of 231 jobs complete, 8 jobs running.
+[08:19:03] Block-level synthesis in progress, 24 of 231 jobs complete, 5 jobs running.
+[08:19:37] Block-level synthesis in progress, 26 of 231 jobs complete, 8 jobs running.
+[08:20:11] Block-level synthesis in progress, 27 of 231 jobs complete, 8 jobs running.
+[08:20:45] Block-level synthesis in progress, 32 of 231 jobs complete, 6 jobs running.
+[08:21:19] Block-level synthesis in progress, 35 of 231 jobs complete, 6 jobs running.
+[08:21:53] Block-level synthesis in progress, 35 of 231 jobs complete, 8 jobs running.
+[08:22:27] Block-level synthesis in progress, 38 of 231 jobs complete, 7 jobs running.
+[08:23:01] Block-level synthesis in progress, 40 of 231 jobs complete, 7 jobs running.
+[08:23:35] Block-level synthesis in progress, 41 of 231 jobs complete, 7 jobs running.
+[08:24:09] Block-level synthesis in progress, 44 of 231 jobs complete, 6 jobs running.
+[08:24:43] Block-level synthesis in progress, 47 of 231 jobs complete, 6 jobs running.
+[08:25:18] Block-level synthesis in progress, 50 of 231 jobs complete, 7 jobs running.
+[08:25:51] Block-level synthesis in progress, 56 of 231 jobs complete, 4 jobs running.
+[08:26:26] Block-level synthesis in progress, 57 of 231 jobs complete, 7 jobs running.
+[08:27:00] Block-level synthesis in progress, 59 of 231 jobs complete, 7 jobs running.
+[08:27:34] Block-level synthesis in progress, 64 of 231 jobs complete, 4 jobs running.
+[08:28:08] Block-level synthesis in progress, 67 of 231 jobs complete, 5 jobs running.
+[08:28:42] Block-level synthesis in progress, 70 of 231 jobs complete, 6 jobs running.
+[08:29:16] Block-level synthesis in progress, 74 of 231 jobs complete, 5 jobs running.
+[08:29:50] Block-level synthesis in progress, 79 of 231 jobs complete, 5 jobs running.
+[08:30:24] Block-level synthesis in progress, 82 of 231 jobs complete, 6 jobs running.
+[08:30:59] Block-level synthesis in progress, 85 of 231 jobs complete, 6 jobs running.
+[08:31:32] Block-level synthesis in progress, 89 of 231 jobs complete, 5 jobs running.
+[08:32:06] Block-level synthesis in progress, 94 of 231 jobs complete, 5 jobs running.
+[08:32:40] Block-level synthesis in progress, 100 of 231 jobs complete, 4 jobs running.
+[08:33:14] Block-level synthesis in progress, 107 of 231 jobs complete, 3 jobs running.
+[08:33:49] Block-level synthesis in progress, 113 of 231 jobs complete, 6 jobs running.
+[08:34:23] Block-level synthesis in progress, 120 of 231 jobs complete, 4 jobs running.
+[08:34:58] Block-level synthesis in progress, 125 of 231 jobs complete, 4 jobs running.
+[08:35:32] Block-level synthesis in progress, 135 of 231 jobs complete, 5 jobs running.
+[08:36:07] Block-level synthesis in progress, 141 of 231 jobs complete, 5 jobs running.
+[08:36:41] Block-level synthesis in progress, 144 of 231 jobs complete, 8 jobs running.
+[08:37:16] Block-level synthesis in progress, 148 of 231 jobs complete, 5 jobs running.
+[08:37:50] Block-level synthesis in progress, 157 of 231 jobs complete, 2 jobs running.
+[08:38:25] Block-level synthesis in progress, 163 of 231 jobs complete, 4 jobs running.
+[08:38:59] Block-level synthesis in progress, 166 of 231 jobs complete, 7 jobs running.
+[08:39:34] Block-level synthesis in progress, 173 of 231 jobs complete, 4 jobs running.
+[08:40:08] Block-level synthesis in progress, 174 of 231 jobs complete, 7 jobs running.
+[08:40:43] Block-level synthesis in progress, 175 of 231 jobs complete, 7 jobs running.
+[08:41:17] Block-level synthesis in progress, 179 of 231 jobs complete, 5 jobs running.
+[08:41:52] Block-level synthesis in progress, 182 of 231 jobs complete, 7 jobs running.
+[08:42:26] Block-level synthesis in progress, 183 of 231 jobs complete, 7 jobs running.
+[08:43:01] Block-level synthesis in progress, 189 of 231 jobs complete, 3 jobs running.
+[08:43:36] Block-level synthesis in progress, 195 of 231 jobs complete, 4 jobs running.
+[08:44:07] Block-level synthesis in progress, 199 of 231 jobs complete, 7 jobs running.
+[08:44:44] Block-level synthesis in progress, 201 of 231 jobs complete, 8 jobs running.
+[08:45:17] Block-level synthesis in progress, 204 of 231 jobs complete, 5 jobs running.
+[08:45:54] Block-level synthesis in progress, 206 of 231 jobs complete, 8 jobs running.
+[08:46:27] Block-level synthesis in progress, 209 of 231 jobs complete, 7 jobs running.
+[08:47:03] Block-level synthesis in progress, 211 of 231 jobs complete, 6 jobs running.
+[08:47:36] Block-level synthesis in progress, 214 of 231 jobs complete, 7 jobs running.
+[08:48:13] Block-level synthesis in progress, 216 of 231 jobs complete, 7 jobs running.
+[08:48:47] Block-level synthesis in progress, 223 of 231 jobs complete, 4 jobs running.
+[08:49:24] Block-level synthesis in progress, 229 of 231 jobs complete, 2 jobs running.
+[08:49:57] Block-level synthesis in progress, 229 of 231 jobs complete, 2 jobs running.
+[08:50:34] Block-level synthesis in progress, 230 of 231 jobs complete, 1 job running.
+[08:51:08] Block-level synthesis in progress, 230 of 231 jobs complete, 1 job running.
+[08:51:45] Block-level synthesis in progress, 230 of 231 jobs complete, 1 job running.
+[08:52:19] Block-level synthesis in progress, 230 of 231 jobs complete, 1 job running.
+[08:52:56] Block-level synthesis in progress, 230 of 231 jobs complete, 1 job running.
+[08:53:30] Block-level synthesis in progress, 230 of 231 jobs complete, 1 job running.
+[08:54:08] Block-level synthesis in progress, 230 of 231 jobs complete, 1 job running.
+[08:54:42] Block-level synthesis in progress, 230 of 231 jobs complete, 1 job running.
+[08:55:18] Top-level synthesis in progress.
+[08:55:51] Top-level synthesis in progress.
+[08:56:27] Top-level synthesis in progress.
+[08:57:02] Top-level synthesis in progress.
+[08:57:36] Run vpl: Step synth: Completed
+[08:57:36] Run vpl: Step impl: Started
+[09:11:47] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 01h 10m 30s 
+
+[09:11:47] Starting logic optimization..
+[09:12:23] Phase 1 Generate And Synthesize MIG Cores
+[09:23:38] Phase 2 Generate And Synthesize Debug Cores
+[09:27:47] Phase 3 Retarget
+[09:27:47] Phase 4 Constant propagation
+[09:28:22] Phase 5 Sweep
+[09:28:58] Phase 6 BUFG optimization
+[09:29:33] Phase 7 Shift Register Optimization
+[09:29:33] Phase 8 Post Processing Netlist
+[09:35:24] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 23m 36s 
+
+[09:35:24] Starting logic placement..
+[09:36:35] Phase 1 Placer Initialization
+[09:36:35] Phase 1.1 Placer Initialization Netlist Sorting
+[09:43:40] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[09:44:51] Phase 1.3 Build Placer Netlist Model
+[09:48:58] Phase 1.4 Constrain Clocks/Macros
+[09:49:35] Phase 2 Global Placement
+[09:49:35] Phase 2.1 Floorplanning
+[09:53:09] Phase 2.1.1 Partition Driven Placement
+[09:53:09] Phase 2.1.1.1 PBP: Partition Driven Placement
+[09:56:44] Phase 2.1.1.2 PBP: Clock Region Placement
+[10:00:53] Phase 2.1.1.3 PBP: Discrete Incremental
+[10:02:04] Phase 2.1.1.4 PBP: Compute Congestion
+[10:02:41] Phase 2.1.1.5 PBP: Macro Placement
+[10:02:41] Phase 2.1.1.6 PBP: UpdateTiming
+[10:03:16] Phase 2.1.1.7 PBP: Add part constraints
+[10:03:16] Phase 2.2 Physical Synthesis After Floorplan
+[10:04:27] Phase 2.3 Update Timing before SLR Path Opt
+[10:04:27] Phase 2.4 Post-Processing in Floorplanning
+[10:04:27] Phase 2.5 Global Placement Core
+[10:15:25] Phase 2.5.1 Physical Synthesis In Placer
+[10:24:58] Phase 3 Detail Placement
+[10:24:58] Phase 3.1 Commit Multi Column Macros
+[10:25:35] Phase 3.2 Commit Most Macros & LUTRAMs
+[10:32:46] Phase 3.3 Small Shape DP
+[10:32:46] Phase 3.3.1 Small Shape Clustering
+[10:33:21] Phase 3.3.2 Flow Legalize Slice Clusters
+[10:33:21] Phase 3.3.3 Slice Area Swap
+[10:33:21] Phase 3.3.3.1 Slice Area Swap Initial
+[10:36:56] Phase 3.4 Place Remaining
+[10:37:33] Phase 3.5 Re-assign LUT pins
+[10:41:43] Phase 3.6 Pipeline Register Optimization
+[10:41:43] Phase 3.7 Fast Optimization
+[10:44:07] Phase 4 Post Placement Optimization and Clean-Up
+[10:44:07] Phase 4.1 Post Commit Optimization
+[10:46:31] Phase 4.1.1 Post Placement Optimization
+[10:46:31] Phase 4.1.1.1 BUFG Insertion
+[10:46:31] Phase 1 Physical Synthesis Initialization
+[10:47:43] Phase 4.1.1.2 BUFG Replication
+[10:47:43] Phase 4.1.1.3 Post Placement Timing Optimization
+[10:53:05] Phase 4.1.1.4 Replication
+[10:55:28] Phase 4.2 Post Placement Cleanup
+[10:56:03] Phase 4.3 Placer Reporting
+[10:56:03] Phase 4.3.1 Print Estimated Congestion
+[10:56:03] Phase 4.4 Final Placement Cleanup
+[11:29:04] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 01h 53m 39s 
+
+[11:29:04] Starting logic routing..
+[11:30:50] Phase 1 Build RT Design
+[11:35:01] Phase 2 Router Initialization
+[11:35:01] Phase 2.1 Fix Topology Constraints
+[11:35:35] Phase 2.2 Pre Route Cleanup
+[11:36:12] Phase 2.3 Global Clock Net Routing
+[11:36:47] Phase 2.4 Update Timing
+[11:39:46] Phase 2.5 Update Timing for Bus Skew
+[11:39:46] Phase 2.5.1 Update Timing
+[11:42:09] Phase 3 Initial Routing
+[11:42:09] Phase 3.1 Global Routing
+[12:09:09] Phase 3.2 Update Timing
+[12:28:33] Phase 3.3 Update Timing
+[12:46:04] Phase 3.4 Update Timing
+[13:03:58] Phase 3.5 Update Timing
+[13:22:01] Phase 3.6 Update Timing
+[13:25:39] Phase 4 Rip-up And Reroute
+[13:25:39] Phase 4.1 Global Iteration 0
+[13:25:39] Phase 4.1.1 Update Timing
+[13:28:38] Phase 4.2 Global Iteration 1
+[16:20:05] Phase 5 Delay and Skew Optimization
+[16:20:05] Phase 5.1 Delay CleanUp
+[16:20:42] Phase 5.2 Clock Skew Optimization
+[16:21:17] Phase 6 Post Hold Fix
+[16:21:17] Phase 6.1 Hold Fix Iter
+[16:21:54] Phase 6.2 Additional Hold Fix
+[16:23:06] Phase 7 Route finalize
+[16:23:41] Phase 8 Verifying routed nets
+[16:24:18] Phase 9 Depositing Routes
+[16:30:55] Run vpl: Step impl: Failed
+[16:30:58] Run vpl: FINISHED. Run Status: impl ERROR
+
+===>The following messages were generated while processing /home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/vivado/vpl/prj/prj.runs/impl_1 :
+ERROR: [VPL 18-1000] Routing results verification failed due to partially-conflicted nets (Up to first 10 of violated nets):  level0_i/level1/level1_i/ulp/ip_cc_axi_data_h2c_00/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[71]_0[51] level0_i/level1/level1_i/ulp/ip_cc_axi_data_h2c_00/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[71]_0[46] level0_i/level1/level1_i/ulp/ip_cc_axi_data_h2c_00/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[71]_0[21] level0_i/level1/level1_i/ulp/ip_cc_axi_data_h2c_00/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[518]_0[284] level0_i/level1/level1_i/ulp/ip_cc_axi_data_h2c_00/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[518]_0[516] level0_i/level1/level1_i/ulp/ip_cc_axi_data_h2c_00/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[518]_0[513] level0_i/level1/level1_i/ulp/ip_cc_axi_data_h2c_00/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[518]_0[505] level0_i/level1/level1_i/ulp/ip_cc_axi_data_h2c_00/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[518]_0[484] level0_i/level1/level1_i/ulp/ip_cc_axi_data_h2c_00/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[518]_0[447] level0_i/level1/level1_i/ulp/ip_cc_axi_data_h2c_00/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[518]_0[427] 
+ERROR: [VPL 60-773] In '/home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/vivado/vpl/runme.log', caught Tcl error:  problem implementing dynamic region, impl_1: route_design ERROR, please look at the run log file '/home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/vivado/vpl/prj/prj.runs/impl_1/runme.log' for more information
+WARNING: [VPL 60-732] Link warning: The available BRAMs may not be sufficient to accommodate the kernels
+ERROR: [VPL 60-704] Integration error, problem implementing dynamic region, impl_1: route_design ERROR, please look at the run log file '/home/yuzhuyu/u55c/u250_mem_align_3/_x.hw/vadd/link/vivado/vpl/prj/prj.runs/impl_1/runme.log' for more information
+ERROR: [VPL 60-1328] Vpl run 'vpl' failed
+ERROR: [VPL 60-806] Failed to finish platform linker
+INFO: [v++ 60-1442] [16:31:13] Run run_link: Step vpl: Failed
+Time (s): cpu = 00:18:25 ; elapsed = 08:29:58 . Memory (MB): peak = 2192.328 ; gain = 0.000 ; free physical = 114949 ; free virtual = 208178
+ERROR: [v++ 60-661] v++ link run 'run_link' failed
+ERROR: [v++ 60-626] Kernel link failed to complete
+ERROR: [v++ 60-703] Failed to finish linking
+INFO: [v++ 60-1653] Closing dispatch client.

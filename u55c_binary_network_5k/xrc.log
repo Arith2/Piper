@@ -1,0 +1,13 @@
+Wed Nov 29 11:57:53 2023: Server was asked to start on port: '35307'
+Wed Nov 29 11:57:53 2023: Server is using token UUID: 'eb35a108-acf6-43e2-b796-dd5f484bb42a'
+Wed Nov 29 11:57:53 2023: Attempting to start server on port '35307'
+Wed Nov 29 11:57:53 2023: XRC main fifo: created main fifo '/tmp/xrcmaineb35a108-acf6-43e2-b796-dd5f484bb42a', fd read = 13
+Wed Nov 29 11:57:53 2023: Running Rule Check Server
+Wed Nov 29 11:57:53 2023: Version 1.6.1
+Wed Nov 29 11:57:53 2023: Rule Check Server: Accepted socket connection from client
+Wed Nov 29 11:57:53 2023: EXCHANGE_TOKEN received, server token: eb35a108-acf6-43e2-b796-dd5f484bb42a, passed token: eb35a108-acf6-43e2-b796-dd5f484bb42a
+Wed Nov 29 11:57:53 2023: SESSION_MGR: creating session with session uuid: '0457a7f5-ae28-4d86-8684-e9fc28a8e03d' and name 'v++_link_network'
+Wed Nov 29 11:58:11 2023: Rule Check Server: Accepted socket connection from client
+Wed Nov 29 11:59:16 2023: Rule Check Server: Accepted socket connection from client
+Wed Nov 29 12:26:24 2023: Rule Check Server: Accepted socket connection from client
+Wed Nov 29 15:03:36 2023: SESSION_MGR: closing session for UUID '0457a7f5-ae28-4d86-8684-e9fc28a8e03d' with name 'v++_link_network'

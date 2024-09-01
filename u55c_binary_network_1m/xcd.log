@@ -1,0 +1,514 @@
+Sat Mar 30 11:06:59 2024: Running xcd server. This server was built by gradle.
+Sat Mar 30 11:06:59 2024: Server was asked to start on port: '35269'
+Sat Mar 30 11:06:59 2024: Server is using token UUID: '1b138cfc-9ffc-4424-869d-7f84a8946b14'
+Sat Mar 30 11:06:59 2024: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Sat Mar 30 11:06:59 2024: Attempting to start server on port '35269'
+Sat Mar 30 11:06:59 2024: XCD main fifo: created main fifo '/tmp/xcdmain1b138cfc-9ffc-4424-869d-7f84a8946b14', fd read = 13
+Sat Mar 30 11:06:59 2024: Running Dispatch Server
+Sat Mar 30 11:06:59 2024: Version 2.2.0
+Sat Mar 30 11:07:08 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:07:08 2024: Starting Socket connection
+Sat Mar 30 11:07:08 2024: EXCHANGE_TOKEN received, server token: 1b138cfc-9ffc-4424-869d-7f84a8946b14, passed token: 1b138cfc-9ffc-4424-869d-7f84a8946b14
+Sat Mar 30 11:07:09 2024: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Sat Mar 30 11:07:09 2024: SESSION_MGR: creating session with session uuid: 'd3316219-47e8-49f5-a693-3eadd7af9b0a' and name 'v++_compile_hls_bil_krnl'
+Sat Mar 30 11:07:09 2024: KERNEL_SVC: creating session with uuid: 'd3316219-47e8-49f5-a693-3eadd7af9b0a' and name 'v++_compile_hls_bil_krnl'
+Sat Mar 30 11:07:09 2024: GUIDANCE_SMGR: creating guidance session with uuid: 'd3316219-47e8-49f5-a693-3eadd7af9b0a' and name 'v++_compile_hls_bil_krnl'
+Sat Mar 30 11:07:09 2024: SYSTEM_DIAGRAM: creating session with uuid: 'd3316219-47e8-49f5-a693-3eadd7af9b0a' and name 'v++_compile_hls_bil_krnl'
+Sat Mar 30 11:20:06 2024: SESSION_MGR: closing session for UUID 'd3316219-47e8-49f5-a693-3eadd7af9b0a' with name 'v++_compile_hls_bil_krnl'
+Sat Mar 30 11:20:06 2024: KERNEL_SVC: closing session for UUID 'd3316219-47e8-49f5-a693-3eadd7af9b0a' with name 'v++_compile_hls_bil_krnl'
+Sat Mar 30 11:20:06 2024: GUIDANCE_SMGR: closing session for UUID 'd3316219-47e8-49f5-a693-3eadd7af9b0a' with name 'v++_compile_hls_bil_krnl'
+Sat Mar 30 11:20:06 2024: SYSTEM_DIAGRAM: closing session for UUID 'd3316219-47e8-49f5-a693-3eadd7af9b0a' with name 'v++_compile_hls_bil_krnl'
+Sat Mar 30 11:20:06 2024: STOP_SERVER received, server token: 1b138cfc-9ffc-4424-869d-7f84a8946b14, passed token: 1b138cfc-9ffc-4424-869d-7f84a8946b14
+Sat Mar 30 11:20:06 2024: Socket received request to stop server.
+Sat Mar 30 11:20:06 2024: Dispatch Server: do_await_stop
+Sat Mar 30 11:20:06 2024: Dispatch Server: stopping mainFifo_
+Sat Mar 30 11:20:06 2024: XCD main fifo: Stopping
+Sat Mar 30 11:20:06 2024: XCD main fifo: do_read error code: Operation canceled
+Sat Mar 30 11:20:06 2024: XCD main fifo: bytes_transferred: 0
+Sat Mar 30 11:20:06 2024: SERVER: destructor for server bound to port 35269
+Sat Mar 30 11:20:06 2024: XCD main fifo: Good unlink of /tmp/xcdmain1b138cfc-9ffc-4424-869d-7f84a8946b14
+Sat Mar 30 11:20:06 2024: Server exiting with status 0.
+Sat Mar 30 11:20:06 2024: Closing log file.
+Sat Mar 30 11:21:39 2024: Running xcd server. This server was built by gradle.
+Sat Mar 30 11:21:39 2024: Server was asked to start on port: '36003'
+Sat Mar 30 11:21:39 2024: Server is using token UUID: 'd367275c-7f2f-4ab6-a73e-bf6e23bbe84d'
+Sat Mar 30 11:21:39 2024: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Sat Mar 30 11:21:39 2024: Attempting to start server on port '36003'
+Sat Mar 30 11:21:39 2024: XCD main fifo: created main fifo '/tmp/xcdmaind367275c-7f2f-4ab6-a73e-bf6e23bbe84d', fd read = 13
+Sat Mar 30 11:21:39 2024: Running Dispatch Server
+Sat Mar 30 11:21:39 2024: Version 2.2.0
+Sat Mar 30 11:21:48 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:21:48 2024: Starting Socket connection
+Sat Mar 30 11:21:48 2024: EXCHANGE_TOKEN received, server token: d367275c-7f2f-4ab6-a73e-bf6e23bbe84d, passed token: d367275c-7f2f-4ab6-a73e-bf6e23bbe84d
+Sat Mar 30 11:21:48 2024: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Sat Mar 30 11:21:48 2024: SESSION_MGR: creating session with session uuid: '85f97bed-8c95-428b-866e-12981be8df69' and name 'v++_link_network'
+Sat Mar 30 11:21:48 2024: KERNEL_SVC: creating session with uuid: '85f97bed-8c95-428b-866e-12981be8df69' and name 'v++_link_network'
+Sat Mar 30 11:21:48 2024: GUIDANCE_SMGR: creating guidance session with uuid: '85f97bed-8c95-428b-866e-12981be8df69' and name 'v++_link_network'
+Sat Mar 30 11:21:48 2024: SYSTEM_DIAGRAM: creating session with uuid: '85f97bed-8c95-428b-866e-12981be8df69' and name 'v++_link_network'
+Sat Mar 30 11:23:05 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:23:05 2024: Starting Socket connection
+Sat Mar 30 11:23:24 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:23:24 2024: Starting Socket connection
+Sat Mar 30 11:37:40 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:37:40 2024: Starting Socket connection
+Sat Mar 30 11:37:40 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:37:40 2024: Starting Socket connection
+Sat Mar 30 11:37:40 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:37:40 2024: Starting Socket connection
+Sat Mar 30 11:37:40 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:37:40 2024: Starting Socket connection
+Sat Mar 30 11:37:40 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:37:40 2024: Starting Socket connection
+Sat Mar 30 11:37:40 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:37:40 2024: Starting Socket connection
+Sat Mar 30 11:37:40 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:37:40 2024: Starting Socket connection
+Sat Mar 30 11:37:40 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:37:40 2024: Starting Socket connection
+Sat Mar 30 11:39:14 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:39:14 2024: Starting Socket connection
+Sat Mar 30 11:39:16 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:39:16 2024: Starting Socket connection
+Sat Mar 30 11:39:21 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:39:21 2024: Starting Socket connection
+Sat Mar 30 11:39:21 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:39:21 2024: Starting Socket connection
+Sat Mar 30 11:39:21 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:39:21 2024: Starting Socket connection
+Sat Mar 30 11:39:26 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:39:26 2024: Starting Socket connection
+Sat Mar 30 11:39:28 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:39:28 2024: Starting Socket connection
+Sat Mar 30 11:39:36 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:39:36 2024: Starting Socket connection
+Sat Mar 30 11:40:54 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:40:54 2024: Starting Socket connection
+Sat Mar 30 11:40:55 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:40:55 2024: Starting Socket connection
+Sat Mar 30 11:41:01 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:41:01 2024: Starting Socket connection
+Sat Mar 30 11:41:03 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:41:03 2024: Starting Socket connection
+Sat Mar 30 11:41:05 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:41:05 2024: Starting Socket connection
+Sat Mar 30 11:41:05 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:41:05 2024: Starting Socket connection
+Sat Mar 30 11:41:26 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:41:26 2024: Starting Socket connection
+Sat Mar 30 11:41:27 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:41:27 2024: Starting Socket connection
+Sat Mar 30 11:41:29 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:41:29 2024: Starting Socket connection
+Sat Mar 30 11:41:29 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:41:29 2024: Starting Socket connection
+Sat Mar 30 11:41:52 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:41:52 2024: Starting Socket connection
+Sat Mar 30 11:41:54 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:41:54 2024: Starting Socket connection
+Sat Mar 30 11:41:59 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:41:59 2024: Starting Socket connection
+Sat Mar 30 11:42:02 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:42:02 2024: Starting Socket connection
+Sat Mar 30 11:42:18 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:42:18 2024: Starting Socket connection
+Sat Mar 30 11:42:24 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:42:24 2024: Starting Socket connection
+Sat Mar 30 11:42:27 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:42:27 2024: Starting Socket connection
+Sat Mar 30 11:42:35 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:42:35 2024: Starting Socket connection
+Sat Mar 30 11:42:37 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:42:37 2024: Starting Socket connection
+Sat Mar 30 11:43:07 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:43:07 2024: Starting Socket connection
+Sat Mar 30 11:43:09 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:43:09 2024: Starting Socket connection
+Sat Mar 30 11:43:26 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:43:26 2024: Starting Socket connection
+Sat Mar 30 11:43:57 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:43:57 2024: Starting Socket connection
+Sat Mar 30 11:44:03 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:44:03 2024: Starting Socket connection
+Sat Mar 30 11:44:06 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:44:06 2024: Starting Socket connection
+Sat Mar 30 11:44:08 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:44:08 2024: Starting Socket connection
+Sat Mar 30 11:44:21 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:44:21 2024: Starting Socket connection
+Sat Mar 30 11:44:22 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:44:22 2024: Starting Socket connection
+Sat Mar 30 11:44:28 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:44:28 2024: Starting Socket connection
+Sat Mar 30 11:44:30 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:44:30 2024: Starting Socket connection
+Sat Mar 30 11:44:47 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:44:47 2024: Starting Socket connection
+Sat Mar 30 11:44:54 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:44:54 2024: Starting Socket connection
+Sat Mar 30 11:44:55 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:44:55 2024: Starting Socket connection
+Sat Mar 30 11:44:55 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:44:55 2024: Starting Socket connection
+Sat Mar 30 11:45:06 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:45:06 2024: Starting Socket connection
+Sat Mar 30 11:45:12 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:45:12 2024: Starting Socket connection
+Sat Mar 30 11:45:19 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:45:19 2024: Starting Socket connection
+Sat Mar 30 11:45:19 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:45:19 2024: Starting Socket connection
+Sat Mar 30 11:45:30 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:45:30 2024: Starting Socket connection
+Sat Mar 30 11:45:38 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:45:38 2024: Starting Socket connection
+Sat Mar 30 11:45:44 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:45:44 2024: Starting Socket connection
+Sat Mar 30 11:45:55 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:45:55 2024: Starting Socket connection
+Sat Mar 30 11:46:09 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:46:09 2024: Starting Socket connection
+Sat Mar 30 11:46:10 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:46:10 2024: Starting Socket connection
+Sat Mar 30 11:46:35 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:46:35 2024: Starting Socket connection
+Sat Mar 30 11:46:40 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:46:40 2024: Starting Socket connection
+Sat Mar 30 11:46:45 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:46:45 2024: Starting Socket connection
+Sat Mar 30 11:47:01 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:47:01 2024: Starting Socket connection
+Sat Mar 30 11:47:05 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:47:05 2024: Starting Socket connection
+Sat Mar 30 11:47:22 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:47:22 2024: Starting Socket connection
+Sat Mar 30 11:47:26 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:47:26 2024: Starting Socket connection
+Sat Mar 30 11:47:30 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:47:30 2024: Starting Socket connection
+Sat Mar 30 11:47:35 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:47:35 2024: Starting Socket connection
+Sat Mar 30 11:47:46 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:47:46 2024: Starting Socket connection
+Sat Mar 30 11:47:56 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:47:56 2024: Starting Socket connection
+Sat Mar 30 11:48:00 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:48:00 2024: Starting Socket connection
+Sat Mar 30 11:48:13 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:48:13 2024: Starting Socket connection
+Sat Mar 30 11:48:17 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:48:17 2024: Starting Socket connection
+Sat Mar 30 11:48:26 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:48:26 2024: Starting Socket connection
+Sat Mar 30 11:48:43 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:48:43 2024: Starting Socket connection
+Sat Mar 30 11:48:52 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:48:52 2024: Starting Socket connection
+Sat Mar 30 11:49:19 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:49:19 2024: Starting Socket connection
+Sat Mar 30 11:49:21 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:49:21 2024: Starting Socket connection
+Sat Mar 30 11:49:47 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:49:47 2024: Starting Socket connection
+Sat Mar 30 11:50:11 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:50:11 2024: Starting Socket connection
+Sat Mar 30 11:50:21 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:50:21 2024: Starting Socket connection
+Sat Mar 30 11:50:31 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:50:31 2024: Starting Socket connection
+Sat Mar 30 11:50:50 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:50:50 2024: Starting Socket connection
+Sat Mar 30 11:50:56 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:50:56 2024: Starting Socket connection
+Sat Mar 30 11:50:56 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:50:56 2024: Starting Socket connection
+Sat Mar 30 11:51:05 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:51:05 2024: Starting Socket connection
+Sat Mar 30 11:51:17 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:51:17 2024: Starting Socket connection
+Sat Mar 30 11:51:17 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:51:17 2024: Starting Socket connection
+Sat Mar 30 11:51:21 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:51:21 2024: Starting Socket connection
+Sat Mar 30 11:51:41 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:51:41 2024: Starting Socket connection
+Sat Mar 30 11:51:46 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:51:46 2024: Starting Socket connection
+Sat Mar 30 11:52:03 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:52:03 2024: Starting Socket connection
+Sat Mar 30 11:52:06 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:52:06 2024: Starting Socket connection
+Sat Mar 30 11:52:27 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:52:27 2024: Starting Socket connection
+Sat Mar 30 11:52:53 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:52:53 2024: Starting Socket connection
+Sat Mar 30 11:52:56 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:52:56 2024: Starting Socket connection
+Sat Mar 30 11:52:57 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:52:57 2024: Starting Socket connection
+Sat Mar 30 11:53:19 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:53:19 2024: Starting Socket connection
+Sat Mar 30 11:53:20 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:53:20 2024: Starting Socket connection
+Sat Mar 30 11:53:24 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:53:24 2024: Starting Socket connection
+Sat Mar 30 11:53:26 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:53:26 2024: Starting Socket connection
+Sat Mar 30 11:53:44 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:53:44 2024: Starting Socket connection
+Sat Mar 30 11:53:46 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:53:46 2024: Starting Socket connection
+Sat Mar 30 11:53:49 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:53:49 2024: Starting Socket connection
+Sat Mar 30 11:53:51 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:53:51 2024: Starting Socket connection
+Sat Mar 30 11:54:10 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:54:10 2024: Starting Socket connection
+Sat Mar 30 11:54:16 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:54:16 2024: Starting Socket connection
+Sat Mar 30 11:54:37 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:54:37 2024: Starting Socket connection
+Sat Mar 30 11:54:39 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:54:39 2024: Starting Socket connection
+Sat Mar 30 11:55:02 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:55:02 2024: Starting Socket connection
+Sat Mar 30 11:55:03 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:55:03 2024: Starting Socket connection
+Sat Mar 30 11:55:28 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:55:28 2024: Starting Socket connection
+Sat Mar 30 11:55:28 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:55:28 2024: Starting Socket connection
+Sat Mar 30 11:55:53 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:55:53 2024: Starting Socket connection
+Sat Mar 30 11:55:53 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:55:53 2024: Starting Socket connection
+Sat Mar 30 11:56:16 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:56:16 2024: Starting Socket connection
+Sat Mar 30 11:56:17 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:56:17 2024: Starting Socket connection
+Sat Mar 30 11:56:18 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:56:18 2024: Starting Socket connection
+Sat Mar 30 11:56:18 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:56:18 2024: Starting Socket connection
+Sat Mar 30 11:56:37 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:56:37 2024: Starting Socket connection
+Sat Mar 30 11:56:44 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:56:44 2024: Starting Socket connection
+Sat Mar 30 11:57:02 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:57:02 2024: Starting Socket connection
+Sat Mar 30 11:57:09 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:57:09 2024: Starting Socket connection
+Sat Mar 30 11:57:27 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:57:27 2024: Starting Socket connection
+Sat Mar 30 11:57:31 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:57:31 2024: Starting Socket connection
+Sat Mar 30 11:57:34 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:57:34 2024: Starting Socket connection
+Sat Mar 30 11:57:54 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:57:54 2024: Starting Socket connection
+Sat Mar 30 11:57:56 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:57:56 2024: Starting Socket connection
+Sat Mar 30 11:57:57 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:57:57 2024: Starting Socket connection
+Sat Mar 30 11:58:19 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:58:19 2024: Starting Socket connection
+Sat Mar 30 11:58:21 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:58:21 2024: Starting Socket connection
+Sat Mar 30 11:58:33 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:58:33 2024: Starting Socket connection
+Sat Mar 30 11:58:46 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:58:46 2024: Starting Socket connection
+Sat Mar 30 11:58:46 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:58:46 2024: Starting Socket connection
+Sat Mar 30 11:58:46 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:58:46 2024: Starting Socket connection
+Sat Mar 30 11:58:49 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:58:49 2024: Starting Socket connection
+Sat Mar 30 11:59:00 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:59:00 2024: Starting Socket connection
+Sat Mar 30 11:59:11 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:59:11 2024: Starting Socket connection
+Sat Mar 30 11:59:25 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:59:25 2024: Starting Socket connection
+Sat Mar 30 11:59:37 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 11:59:37 2024: Starting Socket connection
+Sat Mar 30 12:00:03 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:00:03 2024: Starting Socket connection
+Sat Mar 30 12:00:03 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:00:03 2024: Starting Socket connection
+Sat Mar 30 12:00:28 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:00:28 2024: Starting Socket connection
+Sat Mar 30 12:00:32 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:00:32 2024: Starting Socket connection
+Sat Mar 30 12:00:53 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:00:53 2024: Starting Socket connection
+Sat Mar 30 12:01:07 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:01:07 2024: Starting Socket connection
+Sat Mar 30 12:01:15 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:01:15 2024: Starting Socket connection
+Sat Mar 30 12:01:15 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:01:15 2024: Starting Socket connection
+Sat Mar 30 12:01:18 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:01:18 2024: Starting Socket connection
+Sat Mar 30 12:01:31 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:01:31 2024: Starting Socket connection
+Sat Mar 30 12:01:40 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:01:40 2024: Starting Socket connection
+Sat Mar 30 12:01:46 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:01:46 2024: Starting Socket connection
+Sat Mar 30 12:01:56 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:01:56 2024: Starting Socket connection
+Sat Mar 30 12:02:05 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:02:05 2024: Starting Socket connection
+Sat Mar 30 12:02:07 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:02:07 2024: Starting Socket connection
+Sat Mar 30 12:02:10 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:02:10 2024: Starting Socket connection
+Sat Mar 30 12:02:22 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:02:22 2024: Starting Socket connection
+Sat Mar 30 12:02:30 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:02:30 2024: Starting Socket connection
+Sat Mar 30 12:02:31 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:02:31 2024: Starting Socket connection
+Sat Mar 30 12:02:47 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:02:47 2024: Starting Socket connection
+Sat Mar 30 12:02:57 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:02:57 2024: Starting Socket connection
+Sat Mar 30 12:02:57 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:02:57 2024: Starting Socket connection
+Sat Mar 30 12:03:05 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:03:05 2024: Starting Socket connection
+Sat Mar 30 12:03:11 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:03:11 2024: Starting Socket connection
+Sat Mar 30 12:03:13 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:03:13 2024: Starting Socket connection
+Sat Mar 30 12:03:23 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:03:23 2024: Starting Socket connection
+Sat Mar 30 12:03:30 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:03:30 2024: Starting Socket connection
+Sat Mar 30 12:03:37 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:03:37 2024: Starting Socket connection
+Sat Mar 30 12:03:39 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:03:39 2024: Starting Socket connection
+Sat Mar 30 12:03:42 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:03:42 2024: Starting Socket connection
+Sat Mar 30 12:03:49 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:03:49 2024: Starting Socket connection
+Sat Mar 30 12:03:56 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:03:56 2024: Starting Socket connection
+Sat Mar 30 12:04:15 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:04:15 2024: Starting Socket connection
+Sat Mar 30 12:04:21 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:04:21 2024: Starting Socket connection
+Sat Mar 30 12:04:42 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:04:42 2024: Starting Socket connection
+Sat Mar 30 12:04:47 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:04:47 2024: Starting Socket connection
+Sat Mar 30 12:05:15 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:05:15 2024: Starting Socket connection
+Sat Mar 30 12:05:22 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:05:22 2024: Starting Socket connection
+Sat Mar 30 12:05:36 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:05:36 2024: Starting Socket connection
+Sat Mar 30 12:05:40 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:05:40 2024: Starting Socket connection
+Sat Mar 30 12:06:02 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:06:02 2024: Starting Socket connection
+Sat Mar 30 12:06:06 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:06:06 2024: Starting Socket connection
+Sat Mar 30 12:06:30 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:06:30 2024: Starting Socket connection
+Sat Mar 30 12:06:30 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:06:30 2024: Starting Socket connection
+Sat Mar 30 12:06:30 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:06:30 2024: Starting Socket connection
+Sat Mar 30 12:06:36 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:06:36 2024: Starting Socket connection
+Sat Mar 30 12:06:47 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:06:47 2024: Starting Socket connection
+Sat Mar 30 12:06:58 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:06:58 2024: Starting Socket connection
+Sat Mar 30 12:06:58 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:06:58 2024: Starting Socket connection
+Sat Mar 30 12:07:04 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:07:04 2024: Starting Socket connection
+Sat Mar 30 12:07:11 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:07:11 2024: Starting Socket connection
+Sat Mar 30 12:07:37 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:07:37 2024: Starting Socket connection
+Sat Mar 30 12:08:05 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:08:05 2024: Starting Socket connection
+Sat Mar 30 12:08:26 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:08:26 2024: Starting Socket connection
+Sat Mar 30 12:08:29 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:08:29 2024: Starting Socket connection
+Sat Mar 30 12:08:32 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:08:32 2024: Starting Socket connection
+Sat Mar 30 12:08:42 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:08:42 2024: Starting Socket connection
+Sat Mar 30 12:08:47 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:08:47 2024: Starting Socket connection
+Sat Mar 30 12:08:50 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:08:50 2024: Starting Socket connection
+Sat Mar 30 12:08:51 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:08:51 2024: Starting Socket connection
+Sat Mar 30 12:08:53 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:08:53 2024: Starting Socket connection
+Sat Mar 30 12:08:56 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:08:56 2024: Starting Socket connection
+Sat Mar 30 12:08:58 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:08:58 2024: Starting Socket connection
+Sat Mar 30 12:09:08 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:09:08 2024: Starting Socket connection
+Sat Mar 30 12:09:12 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:09:12 2024: Starting Socket connection
+Sat Mar 30 12:09:16 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:09:16 2024: Starting Socket connection
+Sat Mar 30 12:09:16 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:09:16 2024: Starting Socket connection
+Sat Mar 30 12:09:18 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:09:18 2024: Starting Socket connection
+Sat Mar 30 12:09:42 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:09:42 2024: Starting Socket connection
+Sat Mar 30 12:10:10 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:10:10 2024: Starting Socket connection
+Sat Mar 30 12:10:41 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:10:41 2024: Starting Socket connection
+Sat Mar 30 12:10:54 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:10:54 2024: Starting Socket connection
+Sat Mar 30 12:10:58 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:10:58 2024: Starting Socket connection
+Sat Mar 30 12:10:59 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:10:59 2024: Starting Socket connection
+Sat Mar 30 12:11:14 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:11:14 2024: Starting Socket connection
+Sat Mar 30 12:11:24 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:11:24 2024: Starting Socket connection
+Sat Mar 30 12:11:26 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:11:26 2024: Starting Socket connection
+Sat Mar 30 12:11:51 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:11:51 2024: Starting Socket connection
+Sat Mar 30 12:12:08 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:12:08 2024: Starting Socket connection
+Sat Mar 30 12:12:38 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:12:38 2024: Starting Socket connection
+Sat Mar 30 12:39:39 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:39:39 2024: Starting Socket connection
+Sat Mar 30 12:42:53 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 12:42:53 2024: Starting Socket connection
+Sat Mar 30 13:05:51 2024: Dispatch Server: Accepted socket connection from client
+Sat Mar 30 13:05:51 2024: Starting Socket connection
+Sat Mar 30 17:33:58 2024: SESSION_MGR: closing session for UUID '85f97bed-8c95-428b-866e-12981be8df69' with name 'v++_link_network'
+Sat Mar 30 17:33:58 2024: KERNEL_SVC: closing session for UUID '85f97bed-8c95-428b-866e-12981be8df69' with name 'v++_link_network'
+Sat Mar 30 17:33:58 2024: GUIDANCE_SMGR: closing session for UUID '85f97bed-8c95-428b-866e-12981be8df69' with name 'v++_link_network'
+Sat Mar 30 17:33:58 2024: SYSTEM_DIAGRAM: closing session for UUID '85f97bed-8c95-428b-866e-12981be8df69' with name 'v++_link_network'
+Sat Mar 30 17:33:58 2024: STOP_SERVER received, server token: d367275c-7f2f-4ab6-a73e-bf6e23bbe84d, passed token: d367275c-7f2f-4ab6-a73e-bf6e23bbe84d
+Sat Mar 30 17:33:58 2024: Socket received request to stop server.
+Sat Mar 30 17:33:58 2024: Dispatch Server: do_await_stop
+Sat Mar 30 17:33:58 2024: Dispatch Server: stopping mainFifo_
+Sat Mar 30 17:33:58 2024: XCD main fifo: Stopping
+Sat Mar 30 17:33:58 2024: XCD main fifo: do_read error code: Operation canceled
+Sat Mar 30 17:33:58 2024: XCD main fifo: bytes_transferred: 0
+Sat Mar 30 17:33:58 2024: SERVER: destructor for server bound to port 36003
+Sat Mar 30 17:33:58 2024: XCD main fifo: Good unlink of /tmp/xcdmaind367275c-7f2f-4ab6-a73e-bf6e23bbe84d
+Sat Mar 30 17:33:58 2024: Server exiting with status 0.
+Sat Mar 30 17:33:58 2024: Closing log file.

@@ -1,0 +1,4 @@
+mkdir -p ./xclbin
+g++ -g -I./ -I/pub/scratch/yuzhuyu/xrt_2022.1/opt/xilinx/xrt/include -I/tools/Xilinx/Vivado/2022.1/include -I/tools/Xilinx/Vitis_HLS/2022.1/include -Wall -O0 -g -std=c++11 -fmessage-length=0 src/host.cpp src/host.hpp -o 'host' -L/pub/scratch/yuzhuyu/xrt_2022.1/opt/xilinx/xrt/lib -lOpenCL -pthread -lrt -lstdc++
+mkdir -p ./xclbin
+/bin/v++ -t hw --config design.cfg --save-temps --report estimate --temp_dir ./_x.hw/vadd -c -k vadd -I'src' -o'xclbin/vadd.hw.xo' 'src/vadd.cpp'  #--from_step vpl.impl.post_route_phys_opt_design
